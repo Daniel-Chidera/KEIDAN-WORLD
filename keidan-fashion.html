@@ -12,11 +12,11 @@
     <title>Keidan Fashion - Luxury Fashion & Accessories</title>
     
     <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/keidan-fashion.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/keidan-fashion.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -47,7 +47,7 @@
     <!-- Hero Section -->
     <section class="hero-section" data-aos="fade-in">
         <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200" alt="Luxury Fashion" class="hero-image">
+            <img src="assets/img/freestocks-_3Q3tsJ01nc-unsplash.jpg" alt="Luxury Fashion" class="hero-image">
             <div class="hero-overlay">
                 <h1 class="hero-title">Luxury Fashion<br>& Accessories...</h1>
                 <a href="shop.html" class="btn-explore">Explore Collection →</a>
@@ -69,35 +69,41 @@
             <div class="product-grid">
                 <!-- Product 1 -->
                 <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1602810318660-d6c8b6c8d8a8?w=400" alt="Balenciaga" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Balenciaga</h3>
-                        <p class="product-description">Body text for whatever you'd like to add more to the subheading.</p>
-                    </div>
+                    <a href="product-detail.html" class="product-link">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1602810318660-d6c8b6c8d8a8?w=400&h=400&fit=crop" alt="Balenciaga" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Balenciaga</h3>
+                            <p class="product-description">Body text for whatever you'd like to add more to the subheading.</p>
+                        </div>
+                    </a>
                 </div>
 
                 <!-- Product 2 -->
                 <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400" alt="Tank top" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Tank top</h3>
-                        <p class="product-description">Body text for whatever you'd like to expand on the main point.</p>
-                    </div>
+                    <a href="product-detail.html" class="product-link">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=400&fit=crop" alt="Tank top" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Tank top</h3>
+                            <p class="product-description">Body text for whatever you'd like to expand on the main point.</p>
+                        </div>
+                    </a>
                 </div>
 
                 <!-- Product 3 -->
                 <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="product-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400" alt="Lorem ipsum" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Lorem ipsum</h3>
-                        <p class="product-description">Body text for whatever you'd like to add more.</p>
-                    </div>
+                    <a href="product-detail.html" class="product-link">
+                        <div class="product-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop" alt="Lorem ipsum" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Lorem ipsum</h3>
+                            <p class="product-description">Body text for whatever you'd like to add more.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -112,17 +118,17 @@
                     <h2 class="sidebar-title">Men</h2>
                     
                     <div class="category-list">
-                        <div class="category-item">
+                        <div class="category-item" data-category="tops">
                             <h3 class="category-name">Tops</h3>
                             <p class="category-description">Body text for whatever you'd like to expand on the main point.</p>
                         </div>
 
-                        <div class="category-item">
+                        <div class="category-item" data-category="bottoms">
                             <h3 class="category-name">Bottoms</h3>
                             <p class="category-description">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes.</p>
                         </div>
 
-                        <div class="category-item">
+                        <div class="category-item" data-category="traditional">
                             <h3 class="category-name">Traditional</h3>
                             <p class="category-description">Body text for whatever you'd like to add more to the main point. It provides details, elaborations, and context.</p>
                         </div>
@@ -137,7 +143,7 @@
 
                 <!-- Right Featured Image -->
                 <div class="featured-image-wrapper" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800" alt="Men's Fashion" class="featured-image" id="genderFeaturedImage">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop" alt="Men's Fashion" class="featured-image" id="genderFeaturedImage">
                 </div>
             </div>
         </div>
@@ -146,14 +152,14 @@
     <!-- Top Collections Section -->
     <section class="collections-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Top Collections</h2>
+            <h2 class="section-title text-center" data-aos="fade-up">Top Collections</h2>
 
             <div class="collections-grid">
                 <!-- Collection 1 -->
                 <div class="collection-card" data-aos="fade-up" data-aos-delay="100">
                     <a href="collection.html" class="collection-link">
                         <div class="collection-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400" alt="Balenciaga Collection" class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&h=400&fit=crop" alt="Balenciaga Collection" class="collection-image">
                         </div>
                         <div class="collection-info">
                             <h3 class="collection-name">Balenciaga</h3>
@@ -166,7 +172,7 @@
                 <div class="collection-card" data-aos="fade-up" data-aos-delay="200">
                     <a href="collection.html" class="collection-link">
                         <div class="collection-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400" alt="Tank top Collection" class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=400&fit=crop" alt="Tank top Collection" class="collection-image">
                         </div>
                         <div class="collection-info">
                             <h3 class="collection-name">Tank top</h3>
@@ -179,7 +185,7 @@
                 <div class="collection-card" data-aos="fade-up" data-aos-delay="300">
                     <a href="collection.html" class="collection-link">
                         <div class="collection-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400" alt="Lorem ipsum Collection" class="collection-image">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=400&fit=crop" alt="Lorem ipsum Collection" class="collection-image">
                         </div>
                         <div class="collection-info">
                             <h3 class="collection-name">Lorem ipsum</h3>
@@ -194,14 +200,14 @@
     <!-- Lookbook Section -->
     <section class="lookbook-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Lookbook</h2>
+            <h2 class="section-title text-center" data-aos="fade-up">Lookbook</h2>
 
             <div class="lookbook-grid">
                 <!-- Lookbook 1 -->
                 <div class="lookbook-card" data-aos="fade-up" data-aos-delay="100">
                     <a href="lookbook.html" class="lookbook-link">
                         <div class="lookbook-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Lookbook 1" class="lookbook-image">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&h=800&fit=crop" alt="Lookbook 1" class="lookbook-image">
                         </div>
                         <div class="lookbook-info">
                             <h3 class="lookbook-title">Subheading</h3>
@@ -214,7 +220,7 @@
                 <div class="lookbook-card" data-aos="fade-up" data-aos-delay="200">
                     <a href="lookbook.html" class="lookbook-link">
                         <div class="lookbook-image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600" alt="Lookbook 2" class="lookbook-image">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&h=800&fit=crop" alt="Lookbook 2" class="lookbook-image">
                         </div>
                         <div class="lookbook-info">
                             <h3 class="lookbook-title">Subheading</h3>
@@ -239,7 +245,7 @@
                     </div>
                 </div>
                 <div class="app-image">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600" alt="Mobile App" class="phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=800&fit=crop" alt="Mobile App" class="phone-mockup">
                 </div>
             </div>
         </div>
@@ -263,7 +269,7 @@
                 <div class="footer-links">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="#latest-music">Latest Music</a></li>
+                        <li><a href="index.html">Latest Music</a></li>
                         <li><a href="keidan-fashion.html">Fashion Collection</a></li>
                         <li><a href="#live-sessions">Live Sessions</a></li>
                         <li><a href="#tour">Tour Dates</a></li>
