@@ -308,7 +308,7 @@ function initScrollToTop() {
 }
 
 // Initialize scroll to top (optional - uncomment if you want it)
-// initScrollToTop();
+initScrollToTop();
 
 // ========== UTILITY: Get Current Gender ==========
 function getCurrentGender() {
