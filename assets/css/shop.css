@@ -1,0 +1,473 @@
+/* Keidan Shop - CSS Styles */
+
+/* ========== SHOP HERO SECTION ========== */
+.shop-hero {
+    width: 100%;
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.shop-hero .hero-image-wrapper {
+    width: 100%;
+    height: 450px;
+    position: relative;
+}
+
+.shop-hero .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.shop-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.quality-badge {
+    background: #ff4444;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.shop-hero .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.shop-hero .hero-subtitle {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.btn-explore-shop {
+    padding: 1rem 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-explore-shop:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== CATEGORY TABS ========== */
+.category-tabs-section {
+    background: #fff;
+    padding: 2rem 0 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.category-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.8rem 2rem;
+    background: white;
+    color: #666;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.tab-btn.active {
+    background: #000;
+    color: white;
+    border-color: #000;
+}
+
+/* ========== PRODUCTS SECTION ========== */
+.products-section {
+    padding: 4rem 0;
+    background: #fafafa;
+    min-height: 600px;
+}
+
+/* Loading State */
+.loading-state {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-state p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #f5f5f5;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+/* Wishlist Heart Button */
+.wishlist-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.wishlist-btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+.wishlist-btn.active {
+    color: #ff4444;
+}
+
+.product-details {
+    padding: 1.5rem;
+}
+
+.product-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+}
+
+/* ========== PAGINATION ========== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.pagination-btn,
+.pagination-number {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #e0e0e0;
+    background: white;
+    color: #666;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-btn {
+    font-size: 1.5rem;
+}
+
+.pagination-btn:hover,
+.pagination-number:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.pagination-number.active {
+    background: #000;
+    color: white;
+    border-color: #000;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.pagination-btn:disabled:hover {
+    border-color: #e0e0e0;
+    color: #666;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet (1024px and below) */
+@media (max-width: 1024px) {
+    .shop-hero {
+        min-height: 400px;
+    }
+
+    .shop-hero .hero-image-wrapper {
+        height: 400px;
+    }
+
+    .shop-hero .hero-title {
+        font-size: 3rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+    .shop-hero {
+        min-height: 350px;
+    }
+
+    .shop-hero .hero-image-wrapper {
+        height: 350px;
+    }
+
+    .shop-hero .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .shop-hero .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .btn-explore-shop {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .category-tabs {
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .tab-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .product-image-container {
+        height: 250px;
+    }
+
+    .pagination {
+        gap: 0.3rem;
+    }
+
+    .pagination-btn,
+    .pagination-number {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .shop-hero {
+        min-height: 300px;
+    }
+
+    .shop-hero .hero-image-wrapper {
+        height: 300px;
+    }
+
+    .shop-hero .hero-title {
+        font-size: 2rem;
+    }
+
+    .shop-hero .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .quality-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .btn-explore-shop {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .product-image-container {
+        height: 220px;
+    }
+
+    .product-details {
+        padding: 1rem;
+    }
+
+    .wishlist-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Stagger animation for product cards */
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.1s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.2s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.3s; }
+.product-card:nth-child(7) { animation-delay: 0.35s; }
+.product-card:nth-child(8) { animation-delay: 0.4s; }
+.product-card:nth-child(9) { animation-delay: 0.45s; }
