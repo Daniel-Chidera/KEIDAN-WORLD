@@ -1,13 +1,8 @@
-// Keidan Cart JS - Shopping Cart Functionality
-
 // ========== CART DATA STORAGE ==========
-// NOTE: This uses JavaScript variables for now (works in artifacts)
-// When deploying, uncomment localStorage code for persistence
-
 let cartItems = [];
 const CART_STORAGE_KEY = 'keidan_cart';
 
-// Initialize cart from storage (if available)
+// Initialize cart from storage 
 function initCart() {
     const stored = localStorage.getItem(CART_STORAGE_KEY);
     if (stored) {
@@ -34,7 +29,7 @@ function saveCart() {
 
 // ========== ADD TO CART ==========
 function addToCart(product) {
-    // Product should have: id, name, price, image, quantity, size (optional), color (optional)
+    // id, name, price, image, quantity, size, color
     const {
         id,
         name,
@@ -69,7 +64,6 @@ function addToCart(product) {
             );
         }
     } else {
-        // New item, add to cart
         const cartItem = {
             id,
             name,
@@ -97,7 +91,7 @@ function addToCart(product) {
     return true;
 }
 
-// ========== REMOVE FROM CART ==========
+// REMOVE FROM CART
 function removeFromCart(productId, size = null, color = null) {
     const initialLength = cartItems.length;
     
@@ -129,7 +123,7 @@ function removeFromCart(productId, size = null, color = null) {
     return false;
 }
 
-// ========== UPDATE QUANTITY ==========
+// UPDATE QUANTITY
 function updateQuantity(productId, newQuantity, size = null, color = null) {
     const item = cartItems.find(item => {
         if (size && color) {
@@ -157,17 +151,17 @@ function updateQuantity(productId, newQuantity, size = null, color = null) {
     return false;
 }
 
-// ========== GET CART ==========
+// GET CART
 function getCart() {
-    return [...cartItems]; // Return a copy
+    return [...cartItems];
 }
 
-// ========== GET CART ITEM COUNT ==========
+// GET CART ITEM COUNT
 function getCartCount() {
     return cartItems.reduce((total, item) => total + item.quantity, 0);
 }
 
-// ========== GET CART TOTAL ==========
+// GET CART TOTAL
 function getCartTotal() {
     return cartItems.reduce((total, item) => {
         const itemPrice = parseFloat(item.price);
@@ -175,12 +169,12 @@ function getCartTotal() {
     }, 0);
 }
 
-// ========== GET CART SUBTOTAL (before tax/shipping) ==========
+// GET CART SUBTOTAL 
 function getCartSubtotal() {
     return getCartTotal();
 }
 
-// ========== CLEAR CART ==========
+// CLEAR CART
 function clearCart() {
     cartItems = [];
     saveCart();
@@ -195,7 +189,7 @@ function clearCart() {
     console.log('Cart cleared');
 }
 
-// ========== CHECK IF ITEM IN CART ==========
+//  CHECK IF ITEM IN CART
 function isInCart(productId, size = null, color = null) {
     return cartItems.some(item => {
         if (size && color) {
@@ -210,7 +204,7 @@ function isInCart(productId, size = null, color = null) {
     });
 }
 
-// ========== GET SPECIFIC CART ITEM ==========
+// GET SPECIFIC CART ITEM
 function getCartItem(productId, size = null, color = null) {
     return cartItems.find(item => {
         if (size && color) {
@@ -225,7 +219,7 @@ function getCartItem(productId, size = null, color = null) {
     });
 }
 
-// ========== UPDATE CART BADGE ==========
+// UPDATE CART BADGE
 function updateCartBadge() {
     const cartIcon = document.querySelectorAll('.nav-icon')[2]; // Cart is 3rd icon
     
@@ -266,7 +260,7 @@ function updateCartBadge() {
     }
 }
 
-// ========== CART ICON CLICK ==========
+//  CART ICON CLICK
 function initCartIcon() {
     const cartIcon = document.querySelectorAll('.nav-icon')[2]; // Cart icon
     
@@ -277,8 +271,7 @@ function initCartIcon() {
             const count = getCartCount();
             
             if (count > 0) {
-                // Navigate to cart page
-                window.location.href = 'cart.html';
+                window.location.href = 'cart-page.html';
             } else {
                 if (window.KeidanUtils) {
                     window.KeidanUtils.showNotification(
@@ -291,12 +284,12 @@ function initCartIcon() {
     }
 }
 
-// ========== VIEW CART ==========
+//  VIEW CART
 function viewCart() {
-    window.location.href = 'cart.html';
+    window.location.href = 'cart-page.html';
 }
 
-// ========== QUICK ADD TO CART (from product cards) ==========
+//  QUICK ADD TO CART
 function quickAddToCart(element) {
     // This can be called from product cards with data attributes
     const productId = element.getAttribute('data-product-id');

@@ -1,10 +1,7 @@
-/* Keidan Fashion CSS - Unique Styles */
-
 body {
-    /* background: red !important; */
     z-index: 0;
 }
-/* ========== HERO SECTION ========== */
+/* HERO SECTION */
 .hero-section {
     width: 100%;
     min-height: 500px;
@@ -68,7 +65,7 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* ========== SHOP SECTION ========== */
+/* SHOP SECTION */
 .shop-section {
     padding: 4rem 0;
     background: #fff;
@@ -164,7 +161,7 @@ body {
     line-height: 1.6;
 }
 
-/* ========== MEN SECTION ========== */
+/* MEN SECTION */
 .men-section {
     padding: 4rem 0;
     background: #fafafa;
@@ -272,6 +269,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.5s;
 }

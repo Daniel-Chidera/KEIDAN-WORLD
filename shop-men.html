@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keidan Men's Shop - Explore curated men's fashion, from tops to accessories. Premium quality clothing and timeless style.">
+    <meta name="keywords" content="Keidan, men's fashion, men's clothing, tops, footwear, traditional wear, accessories">
+    <meta name="author" content="Keidan">
+    <meta property="og:title" content="Men's Shop - Keidan">
+    <meta property="og:description" content="Explore premium men's fashion collections.">
+    <meta property="og:type" content="website">
+    <title>Men's Shop - Keidan</title>
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/shop-men.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <span class="back-arrow">←</span>
+            <h1 class="logo">KEIDAN</h1>
+        </div>
+        
+        <ul class="nav-center">
+            <li><a href="index.html" class="nav-link">Music</a></li>
+            <li><a href="keidan-fashion.html" class="nav-link active">Fashion</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#community" class="nav-link">Community</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <div class="nav-right">
+            <span class="nav-icon"><img width="25" height="25" src="https://img.icons8.com/fluency/50/like.png" alt="like"/></span>
+            <span class="nav-icon"><img width="25" height="25" src="https://img.icons8.com/fluency/48/fast-cart.png" alt="fast-cart"/></span>
+            <span class="nav-icon"><img width="25" height="25" src="https://img.icons8.com/fluency/50/administrator-male.png" alt="administrator-male"/></span>
+        </div>
+        
+        <button class="menu-toggle">☰</button>
+    </nav>
+
+    <section class="men-shop-hero">
+        <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=1200&h=600&fit=crop" alt="Men's Shop" class="hero-image">
+            <div class="hero-overlay">
+                <h1 class="hero-title">Men's Shop</h1>
+                <p class="hero-subtitle">Explore pieces curated for timeless expression aficionado</p>
+                <button class="btn-explore-hero">Explore →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Sections -->
+    <section class="categories-section">
+        <div class="container">
+            
+            <!-- Tops Section -->
+            <div class="category-block">
+                <div class="category-content">
+                    <h2 class="category-title">Tops</h2>
+                    <p class="category-description">A subheading for this section, as long or as short as you like</p>
+                    <button class="btn-explore" data-category="tops">Explore</button>
+                </div>
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1620799139834-6b8f844fbe61?w=600&h=600&fit=crop" alt="Men's Tops" class="category-image">
+                </div>
+            </div>
+
+            <!-- Footwear Section -->
+            <div class="category-block reverse">
+                <div class="category-content">
+                    <h2 class="category-title">Footwear</h2>
+                    <p class="category-description">A subheading for this section, as long or as short as you like</p>
+                    <button class="btn-explore" data-category="footwear">Explore</button>
+                </div>
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600&h=600&fit=crop" alt="Men's Footwear" class="category-image">
+                </div>
+            </div>
+
+            <!-- Traditional & African Wear Section -->
+            <div class="category-block">
+                <div class="category-content">
+                    <h2 class="category-title">Traditional & African Wear</h2>
+                    <p class="category-description">A subheading for this section, as long or as short as you like</p>
+                    <button class="btn-explore" data-category="traditional">Explore</button>
+                </div>
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=600&h=600&fit=crop" alt="Traditional Wear" class="category-image">
+                </div>
+            </div>
+
+            <!-- Accessories Section -->
+            <div class="category-block reverse">
+                <div class="category-content">
+                    <h2 class="category-title">Accessories</h2>
+                    <p class="category-description">A subheading for this section, as long or as short as you like</p>
+                    <button class="btn-explore" data-category="accessories">Explore</button>
+                </div>
+                <div class="category-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&h=600&fit=crop" alt="Men's Accessories" class="category-image">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Products Display Section -->
+    <section class="products-display-section" id="productsDisplaySection" style="display: none;">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="products-category-title" id="productsCategoryTitle">Category Products</h2>
+                <button class="btn-back-to-categories" id="backToCategoriesBtn">← Back to Categories</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <button class="pagination-btn prev-btn">‹</button>
+                <button class="pagination-number active" data-page="1">1</button>
+                <button class="pagination-number" data-page="2">2</button>
+                <button class="pagination-number" data-page="3">3</button>
+                <button class="pagination-btn next-btn">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App Section -->
+    <section class="app-section">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text">
+                    <h3>Download the Keidan mobile app</h3>
+                    <p>Stay updated on latest hits, vibes, and waves with the Keidan mobile app</p>
+                    <div class="app-buttons">
+                        <button class="btn-app"><img width="25" height="25" src="https://img.icons8.com/fluency/48/apple-app-store.png" alt="apple-app-store"/> App Store</button>
+                        <button class="btn-app"><img width="25" height="25" src="https://img.icons8.com/fluency/50/google-play.png" alt="google-play"/> Play Store</button>
+                    </div>
+                </div>
+                <div class="app-image">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=800&fit=crop" alt="Mobile App" class="phone-mockup">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="footer-logo">KEIDAN</h3>
+                    <p>Where music meets fashion, where culture meets creativity. Join us on this journey of artistic expression and cultural celebration.</p>
+                    <div class="social-icons">
+                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook-new"/></span>
+                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/twitterx--v1.png" alt="twitterx--v1"/></span>
+                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></span>
+                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/youtube.png" alt="youtube"/></span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Latest Music</a></li>
+                        <li><a href="keidan-fashion.html">Fashion Collection</a></li>
+                        <li><a href="#live-sessions">Live Sessions</a></li>
+                        <li><a href="#tour">Tour Dates</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📧 hello@keidanworld.com</p>
+                    <p>📍 Lagos • London • New York</p>
+                    
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your Email" class="email-input">
+                            <button class="btn-join">Join</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Keidan World. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/wishlist.js"></script>
+    <script src="assets/js/shop-men.js"></script>
+</body>
+</html>

@@ -1,6 +1,3 @@
-// Keidan Product Detail JS - Product Detail Page Functionality
-
-// ========== STATE ==========
 let currentProduct = null;
 let selectedColor = 'black';
 let selectedSize = 'S';
@@ -152,7 +149,7 @@ function initFloatingCartButton() {
     
     if (floatingCartBtn) {
         floatingCartBtn.addEventListener('click', function() {
-            window.location.href = 'cart.html';
+            window.location.href = 'cart-page.html';
         });
     }
 }

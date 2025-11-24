@@ -1,6 +1,4 @@
-// Keidan Main JS - Global Scripts
-
-// ========== INITIALIZE ON PAGE LOAD ==========
+// INITIALIZE ON PAGE LOAD
 document.addEventListener('DOMContentLoaded', function() {
     initNavbar();
     initBackButton();
@@ -13,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Keidan Main JS initialized successfully!');
 });
 
-// ========== NAVBAR FUNCTIONALITY ==========
+// NAVBAR FUNCTIONALITY
 function initNavbar() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navCenter = document.querySelector('.nav-center');
@@ -55,7 +53,7 @@ function initNavbar() {
         }
     });
 
-    // Navbar scroll effect - hide on scroll down, show on scroll up
+    // Navbar scroll effect 
     let lastScroll = 0;
     const navbar = document.querySelector('.navbar');
     
@@ -68,10 +66,8 @@ function initNavbar() {
         }
         
         if (currentScroll > lastScroll && currentScroll > 100) {
-            // Scrolling down
             navbar.style.transform = 'translateY(-100%)';
         } else {
-            // Scrolling up
             navbar.style.transform = 'translateY(0)';
         }
         
@@ -79,7 +75,7 @@ function initNavbar() {
     });
 }
 
-// ========== BACK BUTTON FUNCTIONALITY ==========
+// BACK BUTTON FUNCTIONALITY
 function initBackButton() {
     const backArrow = document.querySelector('.back-arrow');
     
@@ -96,49 +92,49 @@ function initBackButton() {
     }
 }
 
-// ========== NEWSLETTER FORM ==========
-function initNewsletterForm() {
-    const newsletterForm = document.querySelector('.newsletter-form');
-    const emailInput = document.querySelector('.email-input');
-    const joinButton = document.querySelector('.btn-join');
+// NEWSLETTER FORM
+// function initNewsletterForm() {
+//     const newsletterForm = document.querySelector('.newsletter-form');
+//     const emailInput = document.querySelector('.email-input');
+//     const joinButton = document.querySelector('.btn-join');
     
-    if (joinButton && emailInput) {
-        joinButton.addEventListener('click', function(e) {
-            e.preventDefault();
+//     if (joinButton && emailInput) {
+//         joinButton.addEventListener('click', function(e) {
+//             e.preventDefault();
             
-            const email = emailInput.value.trim();
+//             const email = emailInput.value.trim();
             
-            // Validation
-            if (email === '') {
-                showNotification('Please enter your email address', 'error');
-                return;
-            }
+//             // Validation
+//             if (email === '') {
+//                 showNotification('Please enter your email address', 'error');
+//                 return;
+//             }
             
-            // Email format validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showNotification('Please enter a valid email address', 'error');
-                return;
-            }
+//             // Email format validation
+//             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//             if (!emailRegex.test(email)) {
+//                 showNotification('Please enter a valid email address', 'error');
+//                 return;
+//             }
             
-            // Success
-            showNotification('Thank you for subscribing! 🎉', 'success');
-            emailInput.value = '';
+//             // Success
+//             showNotification('Thank you for subscribing! 🎉', 'success');
+//             emailInput.value = '';
             
-            // Here you would normally send to backend
-            console.log('Newsletter subscription:', email);
-        });
+//             // Here you would normally send to backend
+//             console.log('Newsletter subscription:', email);
+//         });
         
-        // Allow Enter key to submit
-        emailInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                joinButton.click();
-            }
-        });
-    }
-}
+//         // Allow Enter key to submit
+//         emailInput.addEventListener('keypress', function(e) {
+//             if (e.key === 'Enter') {
+//                 joinButton.click();
+//             }
+//         });
+//     }
+// }
 
-// ========== SOCIAL ICONS ==========
+// SOCIAL ICONS
 function initSocialIcons() {
     const socialIcons = document.querySelectorAll('.social-icons span');
     
@@ -155,7 +151,7 @@ function initSocialIcons() {
     });
 }
 
-// ========== APP STORE BUTTONS ==========
+// APP STORE BUTTONS
 function initAppButtons() {
     const appButtons = document.querySelectorAll('.btn-app');
     
@@ -170,7 +166,7 @@ function initAppButtons() {
     });
 }
 
-// ========== SCROLL EFFECTS ==========
+// SCROLL EFFECTS
 function initScrollEffects() {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -222,7 +218,7 @@ function initScrollEffects() {
     }
 }
 
-// ========== PAGE TRANSITION ==========
+// PAGE TRANSITION
 function initPageTransition() {
     // Fade in page on load
     document.body.style.opacity = '0';
@@ -233,7 +229,7 @@ function initPageTransition() {
     }, 100);
 }
 
-// ========== NOTIFICATION SYSTEM ==========
+// NOTIFICATION SYSTEM
 function showNotification(message, type = 'info') {
     // Remove existing notification if any
     const existing = document.querySelector('.notification');
@@ -304,7 +300,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ========== UTILITY FUNCTIONS ==========
+// UTILITY FUNCTIONS
 
 // Check if element is in viewport
 function isInViewport(element) {

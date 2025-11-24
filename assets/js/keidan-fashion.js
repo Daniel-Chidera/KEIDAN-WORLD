@@ -18,8 +18,8 @@ function initGenderToggle() {
     
     // Images for men and women
     const images = {
-        men: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop',
-        women: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=1000&fit=crop'
+        men: 'https://images.unsplash.com/photo-1685566869382-756826f3aeca?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        women: 'https://images.unsplash.com/photo-1491433680626-cdd7c6f385df?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     };
     
     let currentGender = 'men'; // Default

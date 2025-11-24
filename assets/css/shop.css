@@ -1,6 +1,4 @@
-/* Keidan Shop - CSS Styles */
-
-/* ========== SHOP HERO SECTION ========== */
+/* SHOP HERO SECTION */
 .shop-hero {
     width: 100%;
     min-height: 450px;
@@ -82,7 +80,7 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* ========== CATEGORY TABS ========== */
+/*  CATEGORY TABS  */
 .category-tabs-section {
     background: #fff;
     padding: 2rem 0 1rem;
@@ -119,7 +117,7 @@
     border-color: #000;
 }
 
-/* ========== PRODUCTS SECTION ========== */
+/*  PRODUCTS SECTION  */
 .products-section {
     padding: 4rem 0;
     background: #fafafa;
@@ -267,7 +265,7 @@
     color: #000;
 }
 
-/* ========== PAGINATION ========== */
+/* PAGINATION (PAGE NUMBER) */
 .pagination {
     display: flex;
     justify-content: center;
@@ -319,7 +317,7 @@
     color: #666;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/*  RESPONSIVE DESIGN */
 
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
@@ -341,7 +339,7 @@
     }
 }
 
-/* Mobile (768px and below) */
+/* Mobile SCREEN (768px and below) */
 @media (max-width: 768px) {
     .shop-hero {
         min-height: 350px;
@@ -395,7 +393,7 @@
     }
 }
 
-/* Small Mobile (480px and below) */
+/* MOBILE SCREEN (480px and below) */
 @media (max-width: 480px) {
     .shop-hero {
         min-height: 300px;
@@ -445,7 +443,7 @@
     }
 }
 
-/* ========== ANIMATIONS ========== */
+/* ANIMATIONS */
 @keyframes fadeIn {
     from {
         opacity: 0;
