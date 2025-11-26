@@ -167,7 +167,7 @@ function updateSubtotal() {
     const subtotalElement = document.getElementById('subtotalAmount');
     
     if (subtotalElement) {
-        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+        subtotalElement.textContent = `₦${subtotal.toFixed(2)}`;
     }
 }
 
