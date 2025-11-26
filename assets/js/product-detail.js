@@ -2,7 +2,7 @@ let currentProduct = null;
 let selectedColor = 'black';
 let selectedSize = 'S';
 
-// ========== INITIALIZE ==========
+// INITIALIZE
 document.addEventListener('DOMContentLoaded', function() {
     loadProductFromURL();
     initColorSelection();
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Product detail page initialized');
 });
 
-// ========== LOAD PRODUCT FROM URL ==========
+// LOAD PRODUCT FROM URL
 function loadProductFromURL() {
     // Get product ID from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -30,7 +30,7 @@ function loadProductFromURL() {
     fetchProductFromShop(productId);
 }
 
-// ========== FETCH PRODUCT FROM SHOP.HTML ==========
+// FETCH PRODUCT FROM SHOP.HTML
 function fetchProductFromShop(productId) {
     fetch('shop.html')
         .then(response => response.text())
@@ -47,7 +47,7 @@ function fetchProductFromShop(productId) {
                 const productData = {
                     id: productId,
                     name: productCard.querySelector('.product-name').textContent,
-                    price: productCard.querySelector('.product-price').textContent.replace('$', ''),
+                    price: productCard.querySelector('.product-price').textContent.replace('₦', ''),
                     description: productCard.querySelector('.product-description').textContent,
                     image: productCard.querySelector('.product-image').src,
                     category: productCard.getAttribute('data-category')
@@ -67,7 +67,7 @@ function fetchProductFromShop(productId) {
         });
 }
 
-// ========== DISPLAY PRODUCT ==========
+// DISPLAY PRODUCT
 function displayProduct(product) {
     // Update page elements
     document.getElementById('mainProductImage').src = product.image;
@@ -75,13 +75,13 @@ function displayProduct(product) {
     document.getElementById('productName').textContent = product.name;
     document.getElementById('productSubheading').textContent = 'Subheading';
     document.getElementById('productDescription').textContent = product.description;
-    document.getElementById('productPrice').textContent = `$${product.price}`;
+    document.getElementById('productPrice').textContent = `₦${product.price}`;
     
     // Update page title
     document.title = `${product.name} - Keidan`;
 }
 
-// ========== COLOR SELECTION ==========
+// COLOR SELECTION
 function initColorSelection() {
     const colorButtons = document.querySelectorAll('.color-btn');
     
@@ -95,7 +95,7 @@ function initColorSelection() {
     });
 }
 
-// ========== SIZE SELECTION ==========
+// SIZE SELECTION
 function initSizeSelection() {
     const sizeButtons = document.querySelectorAll('.size-btn');
     
@@ -109,7 +109,7 @@ function initSizeSelection() {
     });
 }
 
-// ========== ADD TO CART ==========
+// ADD TO CART
 function initAddToCartButton() {
     const addToCartBtn = document.getElementById('addToCartBtn');
     
@@ -143,7 +143,7 @@ function initAddToCartButton() {
     }
 }
 
-// ========== FLOATING CART BUTTON ==========
+// FLOATING CART BUTTON
 function initFloatingCartButton() {
     const floatingCartBtn = document.getElementById('floatingCartBtn');
     
@@ -164,7 +164,7 @@ function updateFloatingCartBadge() {
     }
 }
 
-// ========== LOAD RELATED PRODUCTS ==========
+// LOAD RELATED PRODUCTS
 function loadRelatedProducts(category) {
     // Fetch shop.html to get related products
     fetch('shop.html')
@@ -185,7 +185,7 @@ function loadRelatedProducts(category) {
                     relatedProducts.push({
                         id: productId,
                         name: card.querySelector('.product-name').textContent,
-                        price: card.querySelector('.product-price').textContent.replace('$', ''),
+                        price: card.querySelector('.product-price').textContent.replace('₦', ''),
                         description: card.querySelector('.product-description').textContent,
                         image: card.querySelector('.product-image').src
                     });
@@ -200,7 +200,7 @@ function loadRelatedProducts(category) {
         });
 }
 
-// ========== DISPLAY RELATED PRODUCTS ==========
+// DISPLAY RELATED PRODUCTS
 function displayRelatedProducts(products) {
     const grid = document.getElementById('relatedProductsGrid');
     grid.innerHTML = '';
@@ -233,7 +233,7 @@ function createRelatedProductCard(product) {
     return card;
 }
 
-// ========== EXPORT FUNCTIONS ==========
+// EXPORT FUNCTIONS
 window.KeidanProductDetail = {
     getCurrentProduct: () => currentProduct,
     getSelectedColor: () => selectedColor,

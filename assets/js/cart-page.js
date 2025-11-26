@@ -1,6 +1,4 @@
-// Keidan Cart Page JS - Cart Page Functionality
-
-// ========== INITIALIZE ==========
+// INITIALIZE
 document.addEventListener('DOMContentLoaded', function() {
     loadCartItems();
     initCheckoutButton();
@@ -8,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Cart page initialized');
 });
 
-// ========== LOAD CART ITEMS ==========
+// LOAD CART ITEMS
 function loadCartItems() {
     if (!window.KeidanCart) {
         console.error('Cart system not loaded');
@@ -41,7 +39,7 @@ function loadCartItems() {
     }
 }
 
-// ========== CREATE CART ITEM ELEMENT ==========
+// CREATE CART ITEM ELEMENT
 function createCartItemElement(item) {
     const cartItem = document.createElement('div');
     cartItem.className = 'cart-item';
@@ -63,7 +61,7 @@ function createCartItemElement(item) {
             <div>
                 <h2 class="cart-product-name">${item.name}</h2>
                 <p class="cart-delivery-date">Delivery Date: ${deliveryDate}</p>
-                <p class="cart-product-price">$${item.price}</p>
+                <p class="cart-product-price">₦${item.price}</p>
                 <p class="cart-product-description">Body text for describing what this product is and why this product is simply a must-buy.</p>
                 
                 <div class="cart-options">
@@ -94,7 +92,7 @@ function createCartItemElement(item) {
     return cartItem;
 }
 
-// ========== CALCULATE DELIVERY DATE ==========
+// CALCULATE DELIVERY DATE
 function calculateDeliveryDate(daysToAdd) {
     const today = new Date();
     const deliveryDate = new Date(today);
@@ -108,7 +106,7 @@ function calculateDeliveryDate(daysToAdd) {
     return `${day}-${month}-${year}`;
 }
 
-// ========== GET COLOR HEX VALUE ==========
+// GET COLOR HEX VALUE
 function getColorHex(colorName) {
     const colors = {
         'black': '#000000',
@@ -128,7 +126,7 @@ function getColorHex(colorName) {
     return colors[colorName?.toLowerCase()] || '#000000';
 }
 
-// ========== INCREASE QUANTITY ==========
+// INCREASE QUANTITY
 function increaseQuantity(productId, size, color) {
     if (!window.KeidanCart) return;
     
@@ -139,7 +137,7 @@ function increaseQuantity(productId, size, color) {
     }
 }
 
-// ========== DECREASE QUANTITY ==========
+// DECREASE QUANTITY
 function decreaseQuantity(productId, size, color) {
     if (!window.KeidanCart) return;
     
@@ -150,7 +148,7 @@ function decreaseQuantity(productId, size, color) {
     }
 }
 
-// ========== REMOVE CART ITEM ==========
+// REMOVE CART ITEM
 function removeCartItem(productId, size, color) {
     if (!window.KeidanCart) return;
     
@@ -161,7 +159,7 @@ function removeCartItem(productId, size, color) {
     }
 }
 
-// ========== UPDATE SUBTOTAL ==========
+// UPDATE SUBTOTAL
 function updateSubtotal() {
     if (!window.KeidanCart) return;
     
@@ -173,7 +171,7 @@ function updateSubtotal() {
     }
 }
 
-// ========== CHECKOUT BUTTON ==========
+// CHECKOUT BUTTON
 function initCheckoutButton() {
     const checkoutBtn = document.getElementById('checkoutBtn');
     
@@ -196,7 +194,7 @@ function initCheckoutButton() {
     }
 }
 
-// ========== MAKE FUNCTIONS GLOBAL ==========
+// MAKE FUNCTIONS GLOBAL
 window.increaseQuantity = increaseQuantity;
 window.decreaseQuantity = decreaseQuantity;
 window.removeCartItem = removeCartItem;

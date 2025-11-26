@@ -1,11 +1,9 @@
-// Keidan Shop JS - Shop Page Functionality
-
-// ========== STATE MANAGEMENT ==========
+// STATE MANAGEMENT
 let currentCategory = 'new-arrivals';
 let currentPage = 1;
 const ITEMS_PER_PAGE = 9;
 
-// ========== INITIALIZE ==========
+// INITIALIZE
 document.addEventListener('DOMContentLoaded', function() {
     initCategoryTabs();
     initPagination();
@@ -19,14 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (categoryParam) {
         switchCategory(categoryParam, false);
     } else {
-        // Show default category
         filterProducts(currentCategory);
     }
     
     console.log('Shop page initialized');
 });
 
-// ========== CATEGORY TABS ==========
+// CATEGORY TABS
 function initCategoryTabs() {
     const tabButtons = document.querySelectorAll('.tab-btn');
     
@@ -77,7 +74,7 @@ function switchCategory(category, showNotification = true) {
     }
 }
 
-// ========== FILTER PRODUCTS ==========
+// FILTER PRODUCTS
 function filterProducts(category) {
     const allProducts = document.querySelectorAll('.product-card');
     const emptyState = document.querySelector('.empty-state');
@@ -104,7 +101,7 @@ function filterProducts(category) {
         }
     });
     
-    // Show/hide empty state
+    // Show or hide empty state
     if (visibleCount === 0) {
         emptyState.style.display = 'block';
     } else {
@@ -124,7 +121,7 @@ function filterProducts(category) {
     }
 }
 
-// ========== PRODUCT CARDS CLICK ==========
+// PRODUCT CARDS CLICK
 function initProductCards() {
     const productCards = document.querySelectorAll('.product-card');
     
@@ -139,7 +136,7 @@ function initProductCards() {
     });
 }
 
-// ========== WISHLIST BUTTONS ==========
+// WISHLIST BUTTONS
 function initWishlistButtons() {
     const wishlistButtons = document.querySelectorAll('.wishlist-btn');
     
@@ -192,7 +189,7 @@ function initWishlistButtons() {
     }
 }
 
-// ========== PAGINATION ==========
+// PAGINATION
 function initPagination() {
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
@@ -264,7 +261,7 @@ function updatePagination(totalProducts) {
     }
 }
 
-// ========== EXPLORE BUTTON ==========
+// EXPLORE BUTTON
 function initExploreButton() {
     const exploreBtn = document.querySelector('.btn-explore-shop');
     
@@ -278,7 +275,7 @@ function initExploreButton() {
     }
 }
 
-// ========== EXPORT FUNCTIONS ==========
+// EXPORT FUNCTIONS
 window.KeidanShop = {
     switchCategory,
     filterProducts,

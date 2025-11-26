@@ -18,13 +18,11 @@ function initNavbar() {
     const navRight = document.querySelector('.nav-right');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Mobile menu toggle
     if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             navCenter.classList.toggle('active');
             navRight.classList.toggle('active');
             
-            // Change icon
             if (navCenter.classList.contains('active')) {
                 menuToggle.textContent = '✕';
             } else {
@@ -92,47 +90,6 @@ function initBackButton() {
     }
 }
 
-// NEWSLETTER FORM
-// function initNewsletterForm() {
-//     const newsletterForm = document.querySelector('.newsletter-form');
-//     const emailInput = document.querySelector('.email-input');
-//     const joinButton = document.querySelector('.btn-join');
-    
-//     if (joinButton && emailInput) {
-//         joinButton.addEventListener('click', function(e) {
-//             e.preventDefault();
-            
-//             const email = emailInput.value.trim();
-            
-//             // Validation
-//             if (email === '') {
-//                 showNotification('Please enter your email address', 'error');
-//                 return;
-//             }
-            
-//             // Email format validation
-//             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//             if (!emailRegex.test(email)) {
-//                 showNotification('Please enter a valid email address', 'error');
-//                 return;
-//             }
-            
-//             // Success
-//             showNotification('Thank you for subscribing! 🎉', 'success');
-//             emailInput.value = '';
-            
-//             // Here you would normally send to backend
-//             console.log('Newsletter subscription:', email);
-//         });
-        
-//         // Allow Enter key to submit
-//         emailInput.addEventListener('keypress', function(e) {
-//             if (e.key === 'Enter') {
-//                 joinButton.click();
-//             }
-//         });
-//     }
-// }
 
 // SOCIAL ICONS
 function initSocialIcons() {
@@ -190,7 +147,7 @@ function initScrollEffects() {
         });
     });
     
-    // Fade in elements on scroll (simple alternative to AOS)
+    // Fade in elements on scroll
     const fadeElements = document.querySelectorAll('[data-aos]');
     
     if (fadeElements.length > 0) {
@@ -300,8 +257,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// UTILITY FUNCTIONS
-
 // Check if element is in viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -328,11 +283,14 @@ function debounce(func, wait) {
 
 // Format currency
 function formatCurrency(amount) {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-NG', {
         style: 'currency',
-        currency: 'USD'
+        currency: 'NGN',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
     }).format(amount);
 }
+
 
 // Export utility functions for use in other scripts
 window.KeidanUtils = {
