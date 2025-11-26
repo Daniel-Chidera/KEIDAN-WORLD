@@ -90,38 +90,37 @@ function initBackButton() {
     }
 }
 
-
-// SOCIAL ICONS
+// THE SOCIAL ICON NOTIFICATION
 function initSocialIcons() {
     const socialIcons = document.querySelectorAll('.social-icons span');
     
-    socialIcons.forEach((icon, index) => {
-        icon.addEventListener('click', function() {
-            const platforms = ['Facebook', 'Twitter', 'Instagram', 'YouTube'];
-            const platform = platforms[index] || 'Social Media';
+    const platforms = [
+        { name: 'Facebook', url: 'https://facebook.com/keidan' },
+        { name: 'Twitter', url: 'https://twitter.com/keidan' },
+        { name: 'Instagram', url: 'https://instagram.com/keidan' },
+        { name: 'YouTube', url: 'https://youtube.com/keidan' }
+    ];
+    
+    socialIcons.forEach((span, index) => {
+        span.style.cursor = 'pointer';
+        
+        span.onclick = function() {
+            const platform = platforms[index];
+            showNotification(`Opening ${platform.name}...`, 'info');
             
-            showNotification(`Opening ${platform}...`, 'info');
+            setTimeout(() => {
+                // window.open(platform.url, '_blank');
+            }, 1000);
             
-            // Here you would add actual social media links
-            console.log(`${platform} clicked`);
-        });
+            console.log(`${platform.name} clicked`);
+        };
     });
 }
 
-// APP STORE BUTTONS
-function initAppButtons() {
-    const appButtons = document.querySelectorAll('.btn-app');
-    
-    appButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const store = button.textContent.includes('App Store') ? 'App Store' : 'Play Store';
-            showNotification(`Redirecting to ${store}...`, 'info');
-            
-            // Here you would add actual app store links
-            console.log(`${store} button clicked`);
-        });
-    });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    initSocialIcons();
+});
+
 
 // SCROLL EFFECTS
 function initScrollEffects() {

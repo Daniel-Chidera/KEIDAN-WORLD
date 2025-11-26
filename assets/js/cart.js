@@ -1,8 +1,8 @@
-// ========== CART DATA STORAGE ==========
+// CART DATA STORAGE
 let cartItems = [];
 const CART_STORAGE_KEY = 'keidan_cart';
 
-// Initialize cart from storage 
+// cart init from storage 
 function initCart() {
     const stored = localStorage.getItem(CART_STORAGE_KEY);
     if (stored) {
@@ -27,7 +27,7 @@ function saveCart() {
     updateCartBadge();
 }
 
-// ========== ADD TO CART ==========
+// ADD TO CART
 function addToCart(product) {
     // id, name, price, image, quantity, size, color
     const {
@@ -221,7 +221,7 @@ function getCartItem(productId, size = null, color = null) {
 
 // UPDATE CART BADGE
 function updateCartBadge() {
-    const cartIcon = document.querySelectorAll('.nav-icon')[2]; // Cart is 3rd icon
+    const cartIcon = document.querySelectorAll('.nav-icon')[1]; // Cart is 3rd icon
     
     if (cartIcon) {
         const count = getCartCount();
@@ -262,7 +262,7 @@ function updateCartBadge() {
 
 //  CART ICON CLICK
 function initCartIcon() {
-    const cartIcon = document.querySelectorAll('.nav-icon')[2]; // Cart icon
+    const cartIcon = document.querySelectorAll('.nav-icon')[1]; // Cart icon
     
     if (cartIcon) {
         cartIcon.style.cursor = 'pointer';
@@ -308,14 +308,14 @@ function quickAddToCart(element) {
     }
 }
 
-// ========== INITIALIZE ==========
+// INITIALIZE
 document.addEventListener('DOMContentLoaded', function() {
     initCart();
     initCartIcon();
     console.log('Cart system initialized');
 });
 
-// ========== EXPORT FUNCTIONS ==========
+// EXPORT FUNCTIONS
 window.KeidanCart = {
     addToCart,
     removeFromCart,
@@ -332,7 +332,7 @@ window.KeidanCart = {
     updateCartBadge
 };
 
-// ========== FOR BACKEND INTEGRATION ==========
+// FOR BACKEND INTEGRATION
 // When you connect to Python backend, use these functions:
 
 // Sync cart with backend

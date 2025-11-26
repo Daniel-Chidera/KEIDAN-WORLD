@@ -224,7 +224,7 @@ function moveAllToCart() {
 
 // UPDATE WISHLIST BADGE
 function updateWishlistBadge() {
-    const wishlistIcon = document.querySelectorAll('.nav-icon')[1]; // Heart is 2nd icon
+    const wishlistIcon = document.querySelectorAll('.nav-icon')[0]; // Heart is 2nd icon
     
     if (wishlistIcon) {
         const count = getWishlistCount();
@@ -286,7 +286,7 @@ function updateWishlistHearts() {
 
 // WISHLIST ICON CLICK
 function initWishlistIcon() {
-    const wishlistIcon = document.querySelectorAll('.nav-icon')[1]; // Heart icon
+    const wishlistIcon = document.querySelectorAll('.nav-icon')[0]; // Heart icon
     
     if (wishlistIcon) {
         wishlistIcon.style.cursor = 'pointer';
