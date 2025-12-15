@@ -18,8 +18,8 @@ function initGenderToggle() {
     
     // Images for men and women
     const images = {
-        men: 'https://images.unsplash.com/photo-1685566869382-756826f3aeca?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        women: 'https://images.unsplash.com/photo-1491433680626-cdd7c6f385df?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        men: 'https://i.pinimg.com/1200x/c8/64/89/c86489f17630528374faa9c5d344cd00.jpg',
+        women: 'assets/img/Image_fx.png'
     };
     
     let currentGender = 'men'; // Default
@@ -261,54 +261,6 @@ function initHeroButton() {
     }
 }
 
-// ========== SCROLL TO TOP BUTTON (OPTIONAL) ==========
-function initScrollToTop() {
-    // Create scroll to top button
-    const scrollBtn = document.createElement('button');
-    scrollBtn.innerHTML = '↑';
-    scrollBtn.className = 'scroll-to-top';
-    scrollBtn.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background: #000;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        font-size: 1.5rem;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 999;
-    `;
-    
-    document.body.appendChild(scrollBtn);
-    
-    // Show/hide based on scroll position
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            scrollBtn.style.opacity = '1';
-            scrollBtn.style.visibility = 'visible';
-        } else {
-            scrollBtn.style.opacity = '0';
-            scrollBtn.style.visibility = 'hidden';
-        }
-    });
-    
-    // Scroll to top on click
-    scrollBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-// Initialize scroll to top (optional - uncomment if you want it)
-initScrollToTop();
 
 // ========== UTILITY: Get Current Gender ==========
 function getCurrentGender() {

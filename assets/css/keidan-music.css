@@ -1,239 +1,164 @@
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Navigation */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 3rem;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.back-arrow {
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #333;
-    transition: transform 0.3s;
-}
-
-.back-arrow:hover {
-    transform: translateX(-5px);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #000;
-}
-
-.nav-center {
-    display: flex;
-    gap: 0.5rem;
-    list-style: none;
-}
-
-.nav-link {
-    padding: 0.6rem 1.5rem;
-    text-decoration: none;
-    color: #333;
-    border-radius: 25px;
-    transition: all 0.3s;
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-.nav-link.active {
-    background: #000;
-    color: white;
-}
-
-.nav-link:hover {
-    background: #f0f0f0;
-}
-
-.nav-link.active:hover {
-    background: #000;
-}
-
-.nav-right {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.nav-icon {
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.nav-icon:hover {
-    transform: scale(1.1);
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
+/* MUSIC HERO SECTION */
+.music-hero {
+    width: 100%;
+    min-height: 400px;
     position: relative;
-    height: 400px;
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }
 
-.hero-image {
+.music-hero .hero-image-wrapper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.music-hero .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.6);
+    display: block;
 }
 
-.hero-overlay {
+.music-hero .hero-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
 
-.hero-title {
-    font-size: 4rem;
+.music-hero .hero-title {
+    font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    font-style: italic;
 }
 
-.hero-subtitle {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 1px;
+.music-hero .hero-subtitle {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-style: italic;
 }
 
-/* Content Section */
-.content-section {
-    padding: 3rem 0;
+/* MUSIC CONTENT SECTION */
+.music-content-section {
+    padding: 4rem 0;
+    background: #fff;
 }
 
-.releases-sessions {
+.music-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
 }
 
+/* SECTION HEADERS */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-icon {
+    font-size: 1.5rem;
+}
+
 .section-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #000;
 }
 
-/* Latest Releases */
-.latest-releases {
-    background: #fff;
-}
-
-.release-list {
+/* LATEST RELEASES */
+.releases-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .release-item {
-    background: #fff;
-    padding: 1.2rem;
-    border-radius: 12px;
-    border: 1px solid #e0e0e0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: box-shadow 0.3s;
-}
-
-.release-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.release-info h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-}
-
-.streams {
-    font-size: 0.85rem;
-    color: #666;
-}
-
-.release-buttons {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.btn-platform {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    background: white;
-    cursor: pointer;
-    font-size: 0.85rem;
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 10px;
     transition: all 0.3s;
 }
 
-.btn-platform:hover {
-    background: #f5f5f5;
-    border-color: #000;
+.release-item:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
 }
 
-/* Live Sessions */
-.session-card {
+.release-info {
+    margin-bottom: 1rem;
+}
+
+.release-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.3rem;
+}
+
+.release-stats {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.release-links {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.platform-btn {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.platform-btn:hover {
+    border-color: #000;
+    transform: translateY(-2px);
+}
+
+/* LIVE SESSIONS */
+.video-container {
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    background: linear-gradient(135deg, #8B1538 0%, #C41E3A 100%);
-    height: 400px;
+    background: #000;
 }
 
-.session-image {
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+}
+
+.thumbnail-image {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
-    opacity: 0.8;
+    display: block;
 }
 
 .play-button {
@@ -243,14 +168,14 @@ body {
     transform: translate(-50%, -50%);
     width: 80px;
     height: 80px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s;
 }
 
 .play-button:hover {
@@ -258,142 +183,148 @@ body {
     background: white;
 }
 
-.session-info {
+.play-icon {
+    font-size: 2rem;
+    color: #000;
+    margin-left: 5px;
+}
+
+.video-info {
     position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     color: white;
 }
 
-.session-title {
+.video-title {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.3rem;
 }
 
-.session-views {
+.video-meta {
     font-size: 0.9rem;
-    opacity: 0.9;
+    color: #ccc;
 }
 
-/* Storytelling Section */
+/* VIDEO PLAYER */
+.video-player {
+    position: relative;
+    width: 100%;
+    background: #000;
+}
+
+.video-player video {
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+
+.close-video {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.close-video:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* STORYTELLING SECTION */
 .storytelling-section {
-    padding: 3rem 0;
+    padding: 4rem 0;
     background: #fafafa;
+}
+
+.section-header-main {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.section-title-main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
 }
 
 .story-card {
     background: white;
-    padding: 2.5rem;
+    padding: 3rem;
     border-radius: 15px;
-    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     position: relative;
 }
 
 .featured-badge {
     display: inline-block;
-    background: #4A90E2;
+    padding: 0.5rem 1rem;
+    background: #000;
     color: white;
-    padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .story-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
     color: #000;
+    font-style: italic;
 }
 
 .story-description {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #666;
-    margin-bottom: 1.5rem;
     line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
-.btn-story {
-    padding: 0.8rem 2rem;
-    border: 2px solid #000;
+.btn-watch-story {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #000;
+    color: white;
+    border: none;
     border-radius: 30px;
-    background: white;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
-.btn-story:hover {
-    background: #000;
-    color: white;
+.btn-watch-story:hover {
+    background: #333;
+    transform: translateY(-2px);
 }
 
-/* Mobile App Section */
-.app-section {
+/* TOUR DATES SECTION */
+.tour-dates-section {
     padding: 4rem 0;
-    background: #1a1a1a;
-    color: white;
+    background: #fff;
 }
 
-.app-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.app-text h3 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-}
-
-.app-text p {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-.app-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn-app {
-    padding: 0.8rem 1.5rem;
-    border: 2px solid white;
-    border-radius: 30px;
-    background: transparent;
-    color: white;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: 500;
-}
-
-.btn-app:hover {
-    background: white;
-    color: #1a1a1a;
-}
-
-.phone-mockup {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-}
-
-/* News & Tour Section */
-.news-tour-section {
-    padding: 4rem 0;
-}
-
-.news-tour-grid {
+.tour-dates-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
@@ -409,283 +340,277 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem;
-    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    background: #f8f8f8;
     border-radius: 10px;
-    transition: box-shadow 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
 }
 
 .tour-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #f0f0f0;
+    transform: translateX(5px);
 }
 
-.tour-venue h4 {
+.tour-venue {
     font-size: 1.1rem;
     font-weight: 600;
+    color: #000;
     margin-bottom: 0.3rem;
 }
 
-.tour-venue p {
+.tour-location {
     font-size: 0.9rem;
     color: #666;
 }
 
-.tour-date {
-    background: #f5f5f5;
-    padding: 0.5rem 1rem;
+.date-badge {
+    padding: 0.6rem 1.2rem;
+    background: white;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 0.9rem;
+    color: #000;
 }
 
-.latest-news-box {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: #f8f8f8;
-    border-radius: 12px;
-    border-left: 4px solid #000;
+.tour-images {
+    display: flex;
+    align-items: center;
 }
 
-.latest-news-box h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.latest-news-box p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Photo Gallery */
-.gallery-grid {
+.tour-image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    width: 100%;
 }
 
-.gallery-image {
+.tour-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s;
-    cursor: pointer;
+    border-radius: 10px;
 }
 
-.gallery-image:hover {
-    transform: scale(1.05);
+/* NEWS SECTION */
+.news-section {
+    padding: 4rem 0;
+    background: #fafafa;
 }
 
-/* Footer */
-.footer {
-    background: #000;
-    color: white;
-    padding: 3rem 0 1rem;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr;
-    gap: 3rem;
-    margin-bottom: 2rem;
-}
-
-.footer-logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 1rem;
-}
-
-.footer-about p {
-    color: #ccc;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    font-size: 1.5rem;
-}
-
-.social-icons span {
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.social-icons span:hover {
-    transform: scale(1.2);
-}
-
-.footer-links h4,
-.footer-contact h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 0.7rem;
-}
-
-.footer-links a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.footer-contact p {
-    color: #ccc;
-    margin-bottom: 0.8rem;
-}
-
-.newsletter {
-    margin-top: 1.5rem;
-}
-
-.newsletter-form {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.8rem;
-}
-
-.email-input {
-    flex: 1;
-    padding: 0.8rem 1rem;
-    border: 1px solid #444;
-    border-radius: 25px;
-    background: #1a1a1a;
-    color: white;
-    font-size: 0.95rem;
-}
-
-.email-input::placeholder {
-    color: #888;
-}
-
-.btn-join {
-    padding: 0.8rem 2rem;
+.news-card {
     background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.news-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
     color: #000;
-    border: none;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
 }
 
-.btn-join:hover {
-    background: #f0f0f0;
+.news-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
 }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #333;
-    color: #888;
-    font-size: 0.9rem;
-}
+/* RESPONSIVE DESIGN */
 
-/* Responsive Design */
+/* Tablet (1024px and below) */
 @media (max-width: 1024px) {
-    .navbar {
-        padding: 1rem 2rem;
+    .music-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
-    .releases-sessions,
-    .app-content,
-    .news-tour-grid {
+    .tour-dates-grid {
         grid-template-columns: 1fr;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
+    .tour-image-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Mobile (768px and below) */
 @media (max-width: 768px) {
-    .nav-center,
-    .nav-right {
-        display: none;
+    .music-hero {
+        min-height: 300px;
     }
 
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar {
-        padding: 1rem;
-    }
-
-    .hero {
+    .music-hero .hero-image-wrapper {
         height: 300px;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .music-hero .hero-title {
+        font-size: 3rem;
     }
 
-    .hero-subtitle {
-        font-size: 1.3rem;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-
-    .app-text h3 {
-        font-size: 1.8rem;
-    }
-
-    .app-buttons {
-        flex-direction: column;
-    }
-
-    .btn-app {
-        width: 100%;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
+    .music-hero .hero-subtitle {
         font-size: 1.2rem;
     }
 
-    .hero-title {
-        font-size: 2rem;
+    .music-content-section {
+        padding: 2rem 0;
     }
 
-    .hero-subtitle {
-        font-size: 1.1rem;
+    .music-grid {
+        gap: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .section-title-main {
+        font-size: 1.6rem;
+    }
+
+    .release-links {
+        flex-direction: column;
+    }
+
+    .platform-btn {
+        width: 100%;
+    }
+
+    .thumbnail-image,
+    .video-player video {
+        height: 250px;
+    }
+
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-icon {
+        font-size: 1.5rem;
+    }
+
+    .story-card {
+        padding: 2rem;
+    }
+
+    .story-title {
+        font-size: 1.5rem;
+    }
+
+    .story-description {
+        font-size: 1rem;
+    }
+
+    .tour-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-img {
+        height: 180px;
+    }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .music-hero {
+        min-height: 250px;
+    }
+
+    .music-hero .hero-image-wrapper {
+        height: 250px;
+    }
+
+    .music-hero .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .music-hero .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-icon {
+        font-size: 1.2rem;
     }
 
     .release-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        padding: 1rem;
     }
 
-    .release-buttons {
-        width: 100%;
-        flex-direction: column;
+    .release-links {
+        display: flex;
+        flex-direction: row;
     }
 
-    .btn-platform {
-        width: 100%;
+    .release-name {
+        font-size: 1rem;
     }
+
+    .platform-btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .thumbnail-image,
+    .video-player video {
+        height: 200px;
+    }
+
+    .story-card {
+        padding: 1.5rem;
+    }
+
+    .story-title {
+        font-size: 1.3rem;
+    }
+
+    .btn-watch-story {
+        padding: 0.8rem 2rem;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tour-item {
+        padding: 1rem;
+    }
+
+    .tour-venue {
+        font-size: 1rem;
+    }
+
+    .date-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .tour-img {
+        height: 150px;
+    }
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.release-item,
+.story-card,
+.tour-item,
+.news-card {
+    animation: fadeIn 0.5s ease-out;
 }

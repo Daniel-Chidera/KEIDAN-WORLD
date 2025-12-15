@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Keidan - Where music meets fashion. Discover latest releases, live sessions, and artist stories from studio to stage.">
-    <meta name="keywords" content="Keidan, music, fashion, live sessions, artist stories, streaming">
+    <meta name="description" content="Keidan Music - Latest releases, live sessions, and tour dates. Experience music from studio to stage.">
+    <meta name="keywords" content="Keidan, music, latest releases, live sessions, tour dates, artist">
     <meta name="author" content="Keidan">
-    <meta property="og:title" content="Keidan - Music From Studio to Stage">
-    <meta property="og:description" content="Where music meets fashion, where culture meets creativity.">
+    <meta property="og:title" content="Music - Keidan">
+    <meta property="og:description" content="Experience music from studio to stage.">
     <meta property="og:type" content="website">
-    <title>Keidan - Music From Studio to Stage</title>
+    <title>Music - Keidan</title>
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/keidan-music.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-left">
             <span class="back-arrow">←</span>
@@ -21,8 +21,8 @@
         </div>
         
         <ul class="nav-center">
-            <li><a href="index.html" class="nav-link active">Music</a></li>
-            <li><a href="keidan-store.html" class="nav-link">Fashion</a></li>
+            <li><a href="keidan-music.html" class="nav-link active">Music</a></li>
+            <li><a href="keidan-fashion.html" class="nav-link">Fashion</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#community" class="nav-link">Community</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -38,63 +38,86 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1200" alt="Music Studio" class="hero-image">
-        <div class="hero-overlay">
-            <h2 class="hero-title">Music</h2>
-            <p class="hero-subtitle">From Studio to Stage</p>
+    <section class="music-hero">
+        <div class="hero-image-wrapper">
+            <img src="https://i.pinimg.com/1200x/39/b4/1a/39b41ad8f6a3144b739fcddfba3d66b6.jpg" alt="Music Studio" class="hero-image">
+            <div class="hero-overlay">
+                <h1 class="hero-title">MUSIC</h1>
+                <p class="hero-subtitle">From Studio to Stage</p>
+            </div>
         </div>
     </section>
 
-    <!-- Latest Releases & Live Sessions -->
-    <section class="content-section">
+    <!-- Latest Releases & Live Sessions Section -->
+    <section class="music-content-section">
         <div class="container">
-            <div class="releases-sessions">
+            <div class="music-grid">
+                
                 <!-- Latest Releases -->
                 <div class="latest-releases">
-                    <h3 class="section-title">▶ Latest Releases</h3>
-                    <div class="release-list">
-                        <div class="release-item">
+                    <div class="section-header">
+                        <span class="section-icon">▶</span>
+                        <h2 class="section-title">Latest Releases</h2>
+                    </div>
+                    
+                    <div class="releases-list">
+                        <div class="release-item" data-song-id="midnight-vibes">
                             <div class="release-info">
-                                <h4>Midnight Vibes</h4>
-                                <p class="streams">3:24 • 2M Streams</p>
+                                <h3 class="release-name">Midnight Vibes</h3>
+                                <p class="release-stats">3:24 • 3M Streams</p>
                             </div>
-                            <div class="release-buttons">
-                                <button class="btn-platform">🔗 Spotify</button>
-                                <button class="btn-platform">Apple Music</button>
+                            <div class="release-links">
+                                <button class="platform-btn" data-platform="spotify" data-link="https://open.spotify.com">
+                                    <img width="20" height="20" src="https://img.icons8.com/fluency/48/spotify.png" alt="spotify"/> Spotify
+                                </button>
+                                <button class="platform-btn" data-platform="apple" data-link="https://music.apple.com">
+                                    <img width="20" height="20" src="https://img.icons8.com/color/48/apple-music--v1.png" alt="apple-music"/> Apple Music
+                                </button>
                             </div>
                         </div>
 
-                        <div class="release-item">
+                        <div class="release-item" data-song-id="golden-hour">
                             <div class="release-info">
-                                <h4>Golden Hour</h4>
-                                <p class="streams">2:50 • 2.8M Streams</p>
+                                <h3 class="release-name">Golden Hour</h3>
+                                <p class="release-stats">2:58 • 2.1M Streams</p>
                             </div>
-                            <div class="release-buttons">
-                                <button class="btn-platform">🔗 Spotify</button>
-                                <button class="btn-platform">Apple Music</button>
+                            <div class="release-links">
+                                <button class="platform-btn" data-platform="spotify" data-link="https://open.spotify.com">
+                                    <img width="20" height="20" src="https://img.icons8.com/fluency/48/spotify.png" alt="spotify"/> Spotify
+                                </button>
+                                <button class="platform-btn" data-platform="apple" data-link="https://music.apple.com">
+                                    <img width="20" height="20" src="https://img.icons8.com/color/48/apple-music--v1.png" alt="apple-music"/> Apple Music
+                                </button>
                             </div>
                         </div>
 
-                        <div class="release-item">
+                        <div class="release-item" data-song-id="city-light">
                             <div class="release-info">
-                                <h4>City Light</h4>
-                                <p class="streams">3:15 • 400k Streams</p>
+                                <h3 class="release-name">City Light</h3>
+                                <p class="release-stats">3:12 • 1.8M Streams</p>
                             </div>
-                            <div class="release-buttons">
-                                <button class="btn-platform">🔗 Spotify</button>
-                                <button class="btn-platform">Apple Music</button>
+                            <div class="release-links">
+                                <button class="platform-btn" data-platform="spotify" data-link="https://open.spotify.com">
+                                    <img width="20" height="20" src="https://img.icons8.com/fluency/48/spotify.png" alt="spotify"/> Spotify
+                                </button>
+                                <button class="platform-btn" data-platform="apple" data-link="https://music.apple.com">
+                                    <img width="20" height="20" src="https://img.icons8.com/color/48/apple-music--v1.png" alt="apple-music"/> Apple Music
+                                </button>
                             </div>
                         </div>
 
-                        <div class="release-item">
+                        <div class="release-item" data-song-id="burning-wheels">
                             <div class="release-info">
-                                <h4>Burning Wheels</h4>
-                                <p class="streams">1:57 • 2.5M Streams</p>
+                                <h3 class="release-name">Burning Wheels</h3>
+                                <p class="release-stats">1:57 • 2.5M Streams</p>
                             </div>
-                            <div class="release-buttons">
-                                <button class="btn-platform">🔗 Spotify</button>
-                                <button class="btn-platform">Apple Music</button>
+                            <div class="release-links">
+                                <button class="platform-btn" data-platform="spotify" data-link="https://open.spotify.com">
+                                    <img width="20" height="20" src="https://img.icons8.com/fluency/48/spotify.png" alt="spotify"/> Spotify
+                                </button>
+                                <button class="platform-btn" data-platform="apple" data-link="https://music.apple.com">
+                                    <img width="20" height="20" src="https://img.icons8.com/color/48/apple-music--v1.png" alt="apple-music"/> Apple Music
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -102,29 +125,129 @@
 
                 <!-- Live Sessions -->
                 <div class="live-sessions">
-                    <h3 class="section-title">🎙 Live Sessions</h3>
-                    <div class="session-card">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600" alt="Live Session" class="session-image">
-                        <div class="play-button">▶</div>
-                        <div class="session-info">
-                            <p class="session-title">Freestyle Session Vol.</p>
-                            <p class="session-views">800K Views • 3 Days ago</p>
+                    <div class="section-header">
+                        <span class="section-icon">🎤</span>
+                        <h2 class="section-title">Live Sessions</h2>
+                    </div>
+                    
+                    <div class="video-container" id="videoContainer">
+                        <div class="video-thumbnail">
+                            <img src="https://i.pinimg.com/1200x/39/65/4e/39654eac40031b1345e3446e826b7105.jpg" alt="Live Session" class="thumbnail-image">
+                            <button class="play-button" id="playButton">
+                                <span class="play-icon">▶</span>
+                            </button>
+                            <div class="video-info">
+                                <h3 class="video-title">Freestyle Session Vol 1</h3>
+                                <p class="video-meta">800K Views • 3 Days ago</p>
+                            </div>
                         </div>
+                        
+                        <!-- Video Player (Hidden initially) -->
+                        <div class="video-player" id="videoPlayer" style="display: none;">
+                            <video controls id="mainVideo">
+                                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <button class="close-video" id="closeVideo">✕</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Keidan Storytelling Section -->
+    <section class="storytelling-section">
+        <div class="container">
+            <div class="section-header-main">
+                <span class="section-icon">📖</span>
+                <h2 class="section-title-main">Keidan Storytelling</h2>
+            </div>
+
+            <div class="story-card">
+                <span class="featured-badge">Featured Story</span>
+                <h3 class="story-title">The Journey Begins</h3>
+                <p class="story-description">From the streets of Lagos to international stages, discover the story behind the music...</p>
+                <a href="story.html" class="btn-watch-story">Watch Full Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Dates Section -->
+    <section class="tour-dates-section">
+        <div class="container">
+            <div class="section-header-main">
+                <span class="section-icon">📅</span>
+                <h2 class="section-title-main">Tour Dates</h2>
+            </div>
+
+            <div class="tour-dates-grid">
+                <div class="tour-list">
+                    <a href="event-detail.html?id=madison-square" class="tour-item">
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Madison Square Garden</h3>
+                            <p class="tour-location">New York City</p>
+                        </div>
+                        <div class="tour-date">
+                            <span class="date-badge">Dec 15</span>
+                        </div>
+                    </a>
+
+                    <a href="event-detail.html?id=o2-arena" class="tour-item">
+                        <div class="tour-info">
+                            <h3 class="tour-venue">O2 Arena</h3>
+                            <p class="tour-location">London</p>
+                        </div>
+                        <div class="tour-date">
+                            <span class="date-badge">Dec 20</span>
+                        </div>
+                    </a>
+
+                    <a href="event-detail.html?id=accor-hotels" class="tour-item">
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Accor Hotels Arena</h3>
+                            <p class="tour-location">Paris</p>
+                        </div>
+                        <div class="tour-date">
+                            <span class="date-badge">Dec 25</span>
+                        </div>
+                    </a>
+
+                    <a href="event-detail.html?id=tafewa-balewa" class="tour-item">
+                        <div class="tour-info">
+                            <h3 class="tour-venue">Tafewa Balewa Stadium</h3>
+                            <p class="tour-location">Lagos</p>
+                        </div>
+                        <div class="tour-date">
+                            <span class="date-badge">Dec 30</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="tour-images">
+                    <div class="tour-image-grid">
+                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=300&fit=crop" alt="Concert 1" class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=300&fit=crop" alt="Concert 2" class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=400&h=300&fit=crop" alt="Concert 3" class="tour-img">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=300&fit=crop" alt="Concert 4" class="tour-img">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Keidan Storytelling -->
-    <section class="storytelling-section">
+    <!-- News & Updates Section -->
+    <section class="news-section">
         <div class="container">
-            <h3 class="section-title">📖 Keidan Storytelling</h3>
-            <div class="story-card">
-                <span class="featured-badge">Featured Story</span>
-                <h4 class="story-title">The Journey Begins</h4>
-                <p class="story-description">From the streets of Lagos to international stages, discover the story behind the music...</p>
-                <button class="btn-story">Watch Full Story</button>
+            <div class="section-header-main">
+                <span class="section-icon">📰</span>
+                <h2 class="section-title-main">News & Updates</h2>
+            </div>
+
+            <div class="news-card">
+                <h3 class="news-title">Latest News</h3>
+                <p class="news-text">Keidan collaborates with Grammy-winning producer for upcoming album...</p>
             </div>
         </div>
     </section>
@@ -142,68 +265,7 @@
                     </div>
                 </div>
                 <div class="app-image">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600" alt="Mobile App" class="phone-mockup">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News & Tour Dates -->
-    <section class="news-tour-section">
-        <div class="container">
-            <div class="news-tour-grid">
-                <!-- Tour Dates -->
-                <div class="tour-dates">
-                    <h3 class="section-title">📅 Tour Dates</h3>
-                    <div class="tour-list">
-                        <div class="tour-item">
-                            <div class="tour-venue">
-                                <h4>Maddison Square Garden</h4>
-                                <p>New York City</p>
-                            </div>
-                            <span class="tour-date">Dec 15</span>
-                        </div>
-
-                        <div class="tour-item">
-                            <div class="tour-venue">
-                                <h4>O2 Arena</h4>
-                                <p>London</p>
-                            </div>
-                            <span class="tour-date">Dec 20</span>
-                        </div>
-
-                        <div class="tour-item">
-                            <div class="tour-venue">
-                                <h4>Accor Hotels Arena</h4>
-                                <p>Paris</p>
-                            </div>
-                            <span class="tour-date">Dec 25</span>
-                        </div>
-
-                        <div class="tour-item">
-                            <div class="tour-venue">
-                                <h4>Tofewa Balewo Stadium</h4>
-                                <p>Lagos</p>
-                            </div>
-                            <span class="tour-date">Dec 30</span>
-                        </div>
-                    </div>
-
-                    <div class="latest-news-box">
-                        <h4>Latest News</h4>
-                        <p>Keidan collaborates with Grammy-winning producer for upcoming album...</p>
-                    </div>
-                </div>
-
-                <!-- Photo Gallery -->
-                <div class="photo-gallery">
-                    <h3 class="section-title">📰 News & Updates</h3>
-                    <div class="gallery-grid">
-                        <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400" alt="Concert" class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400" alt="Performance" class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400" alt="Madison Square" class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=400" alt="Stage" class="gallery-image">
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=800&fit=crop" alt="Mobile App" class="phone-mockup">
                 </div>
             </div>
         </div>
@@ -227,8 +289,8 @@
                 <div class="footer-links">
                     <h4>Explore</h4>
                     <ul>
-                        <li><a href="#latest-music">Latest Music</a></li>
-                        <li><a href="#fashion">Fashion Collection</a></li>
+                        <li><a href="keidan-music.html">Latest Music</a></li>
+                        <li><a href="keidan-fashion.html">Fashion Collection</a></li>
                         <li><a href="#live-sessions">Live Sessions</a></li>
                         <li><a href="#tour">Tour Dates</a></li>
                         <li><a href="#community">Community</a></li>
@@ -256,6 +318,11 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/keidan-music.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/wishlist.js"></script>
 </body>
 </html>
