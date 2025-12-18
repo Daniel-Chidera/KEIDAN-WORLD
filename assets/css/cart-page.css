@@ -1,6 +1,6 @@
 /* Keidan Cart Page - CSS Styles */
 
-/* ========== CART SECTION ========== */
+/* CART SECTION */
 .cart-section {
     padding: 3rem 0;
     background: #fff;
@@ -37,12 +37,12 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem 0;
-    position: relative;
+    position:relative;
 }
 
 .remove-item-btn {
     position: absolute;
-    top: 0;
+    top: 2rem;
     right: 0;
     background: none;
     border: none;
@@ -50,6 +50,7 @@
     color: #999;
     cursor: pointer;
     transition: all 0.3s;
+    z-index: 10;
 }
 
 .remove-item-btn:hover {
@@ -62,6 +63,7 @@
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #000;
+    padding-right: 2.5rem;
 }
 
 .cart-delivery-date {
@@ -165,7 +167,7 @@
     border-color: #000;
 }
 
-/* ========== EMPTY CART STATE ========== */
+/* EMPTY CART STATE */
 .empty-cart {
     text-align: center;
     padding: 5rem 2rem;
@@ -217,7 +219,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* ========== CART SUMMARY ========== */
+/* CART SUMMARY */
 .cart-summary {
     max-width: 600px;
     margin: 3rem auto 0;
@@ -270,7 +272,7 @@
     transform: translateY(0);
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* RESPONSIVE DESIGN */
 
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
@@ -304,6 +306,12 @@
         padding: 1.5rem 0;
     }
 
+    /* Keep X button on the right on mobile */
+    .remove-item-btn {
+        top: 1.5rem;
+        right: 0;
+    }
+
     .cart-item-image {
         height: 300px;
         width: 100%;
@@ -320,14 +328,6 @@
     .cart-options {
         flex-wrap: wrap;
         gap: 1rem;
-    }
-
-    .remove-item-btn {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin-top: 1rem;
-        align-self: flex-start;
     }
 
     .summary-label,
@@ -355,6 +355,12 @@
 
 /* Small Mobile (480px and below) */
 @media (max-width: 480px) {
+    /* Ensure X stays on right for small screens */
+    .remove-item-btn {
+        top: 1.5rem;
+        right: 0;
+    }
+
     .cart-item-image {
         height: 250px;
     }
@@ -408,7 +414,7 @@
     }
 }
 
-/* ========== ANIMATIONS ========== */
+/* ANIMATIONS */
 @keyframes fadeIn {
     from {
         opacity: 0;

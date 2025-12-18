@@ -56,7 +56,7 @@ function createCartItemElement(item) {
     cartItem.innerHTML = `
         <img src="${item.image}" alt="${item.name}" class="cart-item-image">
         <div class="cart-item-info">
-            <button class="remove-item-btn" onclick="removeCartItem('${item.id}', '${item.size || ''}', '${item.color || ''}')">×</button>
+            <button class="remove-item-btn" onclick="removeCartItem('${item.id}', '${item.size || ''}', '${item.color || ''}')"><i class="fa-solid fa-trash-can"></i></button>
             
             <div>
                 <h2 class="cart-product-name">${item.name}</h2>

@@ -259,10 +259,40 @@
     line-height: 1.5;
 }
 
+.price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .product-price {
     font-size: 1.3rem;
     font-weight: 700;
     color: #000;
+}
+
+.price-section button{
+    padding: 10px 20px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+
+.btn-add-to-cart:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add-to-cart:active {
+    transform: translateY(0);
 }
 
 /* PAGINATION (PAGE NUMBER) */
@@ -374,12 +404,25 @@
     }
 
     .products-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 
     .product-image-container {
         height: 250px;
+    }
+
+    .product-price {
+        font-size: 0.8rem;
+    }
+
+    .product-price span{
+        display: block;
+    }
+    .price-section button{
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
     }
 
     .pagination {

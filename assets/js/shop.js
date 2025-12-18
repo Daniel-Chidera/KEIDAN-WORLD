@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initExploreButton();
     initProductCards();
     initWishlistButtons();
+    initAddToCartButtons();
     
     // Check URL for category parameter
     const urlParams = new URLSearchParams(window.location.search);
@@ -103,9 +104,9 @@ function filterProducts(category) {
     
     // Show or hide empty state
     if (visibleCount === 0) {
-        emptyState.style.display = 'block';
+        if (emptyState) emptyState.style.display = 'block';
     } else {
-        emptyState.style.display = 'none';
+        if (emptyState) emptyState.style.display = 'none';
     }
     
     // Update pagination
@@ -127,11 +128,57 @@ function initProductCards() {
     
     productCards.forEach(card => {
         card.addEventListener('click', function(e) {
-            // Don't navigate if clicking wishlist button
-            if (e.target.closest('.wishlist-btn')) return;
+            // Don't navigate if clicking wishlist button or add to cart button
+            if (e.target.closest('.wishlist-btn') || e.target.closest('.btn-add-to-cart')) {
+                return;
+            }
             
             const productId = this.getAttribute('data-product-id');
             window.location.href = `product-detail.html?id=${productId}`;
+        });
+    });
+}
+
+// ADD TO CART BUTTONS
+function initAddToCartButtons() {
+    const addToCartButtons = document.querySelectorAll('.btn-add-to-cart');
+    
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation(); // PREVENT OPENING PRODUCT PAGE
+            
+            const productCard = this.closest('.product-card');
+            const productId = productCard.getAttribute('data-product-id');
+            const productName = productCard.querySelector('.product-name').textContent;
+            const productPriceText = productCard.querySelector('.product-price').textContent;
+            const productPrice = parseFloat(productPriceText.replace('₦', '').replace(',', ''));
+            const productImage = productCard.querySelector('.product-image').src;
+            
+            // Add to cart (using window.KeidanCart if available)
+            if (window.KeidanCart) {
+                window.KeidanCart.addToCart({
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1
+                });
+            }
+            
+            // Show notification
+            if (window.KeidanUtils) {
+                window.KeidanUtils.showNotification(
+                    `${productName} added to cart!`,
+                    'success'
+                );
+            }
+            
+            console.log('Added to cart:', {
+                id: productId,
+                name: productName,
+                price: productPrice,
+                image: productImage
+            });
         });
     });
 }
@@ -219,6 +266,9 @@ function initPagination() {
 function updatePagination(totalProducts) {
     const totalPages = Math.ceil(totalProducts / ITEMS_PER_PAGE);
     const pagination = document.getElementById('pagination');
+    
+    if (!pagination) return;
+    
     const prevBtn = pagination.querySelector('.prev-btn');
     const nextBtn = pagination.querySelector('.next-btn');
     

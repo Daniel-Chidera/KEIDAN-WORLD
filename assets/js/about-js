@@ -1,0 +1,142 @@
+// INITIALIZE ON PAGE LOAD
+document.addEventListener('DOMContentLoaded', function() {
+    initContactForm();
+    initNewsletterForm();
+    
+    console.log('Keidan About Us page initialized successfully!');
+});
+
+// ========== CONTACT FORM ==========
+// function initContactForm() {
+//     const contactForm = document.getElementById('contactForm');
+    
+//     if (contactForm) {
+//         contactForm.addEventListener('submit', function(e) {
+//             e.preventDefault();
+            
+//             // Get form values
+//             const firstName = document.getElementById('firstName').value.trim();
+//             const lastName = document.getElementById('lastName').value.trim();
+//             const email = document.getElementById('email').value.trim();
+//             const message = document.getElementById('message').value.trim();
+            
+//             // Validate form
+//             if (!firstName || !lastName || !email || !message) {
+//                 if (window.KeidanUtils) {
+//                     window.KeidanUtils.showNotification(
+//                         'Please fill in all fields',
+//                         'error'
+//                     );
+//                 }
+//                 return;
+//             }
+            
+//             // Validate email
+//             if (!validateEmail(email)) {
+//                 if (window.KeidanUtils) {
+//                     window.KeidanUtils.showNotification(
+//                         'Please enter a valid email address',
+//                         'error'
+//                     );
+//                 }
+//                 return;
+//             }
+            
+//             // Show loading notification
+//             if (window.KeidanUtils) {
+//                 window.KeidanUtils.showNotification(
+//                     'Sending message...',
+//                     'info'
+//                 );
+//             }
+            
+//             // Simulate form submission
+//             setTimeout(() => {
+//                 // Show success notification
+//                 if (window.KeidanUtils) {
+//                     window.KeidanUtils.showNotification(
+//                         'Message sent successfully! We\'ll get back to you soon.',
+//                         'success'
+//                     );
+//                 }
+                
+//                 // Reset form
+//                 contactForm.reset();
+//             }, 1500);
+            
+//             // Log form data (in production, this would be sent to a server)
+//             console.log('Contact Form Submitted:', {
+//                 firstName,
+//                 lastName,
+//                 email,
+//                 message,
+//                 timestamp: new Date().toISOString()
+//             });
+//         });
+//     }
+// }
+
+// ========== NEWSLETTER FORM ==========
+function initNewsletterForm() {
+    const newsletterForm = document.querySelector('.newsletter-form');
+    const emailInput = document.querySelector('.newsletter-form .email-input');
+    const joinButton = document.querySelector('.newsletter-form .btn-join');
+    
+    if (joinButton) {
+        joinButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (emailInput && emailInput.value.trim() !== '') {
+                const email = emailInput.value.trim();
+                
+                // Basic email validation
+                if (validateEmail(email)) {
+                    if (window.KeidanUtils) {
+                        window.KeidanUtils.showNotification(
+                            'Successfully subscribed to newsletter!',
+                            'success'
+                        );
+                    }
+                    emailInput.value = '';
+                    
+                    console.log('Newsletter Subscription:', {
+                        email,
+                        timestamp: new Date().toISOString()
+                    });
+                } else {
+                    if (window.KeidanUtils) {
+                        window.KeidanUtils.showNotification(
+                            'Please enter a valid email address',
+                            'error'
+                        );
+                    }
+                }
+            } else {
+                if (window.KeidanUtils) {
+                    window.KeidanUtils.showNotification(
+                        'Please enter your email address',
+                        'error'
+                    );
+                }
+            }
+        });
+    }
+}
+
+// ========== EMAIL VALIDATION ==========
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+// ========== EXPORT FUNCTIONS ==========
+window.KeidanAbout = {
+    submitContactForm: function() {
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.dispatchEvent(new Event('submit'));
+        }
+    }
+};
+
+console.log('Keidan About Us JS loaded successfully!');

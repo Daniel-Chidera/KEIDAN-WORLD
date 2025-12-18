@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Keidan Shop - Browse our complete collection of premium fashion items, new arrivals, limited editions, and exclusive sales.">
-    <meta name="keywords" content="Keidan, shop, fashion store, new arrivals, limited editions, collections, accessories, sales">
+    <meta name="description"
+        content="Keidan Shop - Browse our complete collection of premium fashion items, new arrivals, limited editions, and exclusive sales.">
+    <meta name="keywords"
+        content="Keidan, shop, fashion store, new arrivals, limited editions, collections, accessories, sales">
     <meta name="author" content="Keidan">
     <meta property="og:title" content="Keidan Shop - Premium Fashion Store">
-    <meta property="og:description" content="Shop premium fashion collections, new arrivals, and exclusive limited editions.">
+    <meta property="og:description"
+        content="Shop premium fashion collections, new arrivals, and exclusive limited editions.">
     <meta property="og:type" content="website">
     <title>Keidan Shop - Premium Fashion Store</title>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
- <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/shop.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-left">
             <span class="back-arrow">←</span>
             <h1 class="logo">KEIDAN</h1>
         </div>
-        
+
         <ul class="nav-center">
             <li><a href="index.html" class="nav-link">Music</a></li>
             <li><a href="keidan-fashion.html" class="nav-link active">Fashion</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="about-us.html" class="nav-link">About</a></li>
             <li><a href="#community" class="nav-link">Community</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-        
+
         <div class="nav-right">
-            <span class="nav-icon"><img width="25" height="25" src="https://img.icons8.com/fluency/50/like.png" alt="like"/></span>
-            <span class="nav-icon"><img width="25" height="25" src="https://img.icons8.com/fluency/48/fast-cart.png" alt="fast-cart"/></span>
-            <span class="nav-icon"><img width="25" height="25" src="https://img.icons8.com/fluency/50/administrator-male.png" alt="administrator-male"/></span>
+            <span class="nav-icon"><i class="fa-solid fa-heart"></i></span>
+            <span class="nav-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+            <span class="nav-icon"><i class="fa-solid fa-user-tie"></i></span>
         </div>
-        
+
         <button class="menu-toggle">☰</button>
     </nav>
 
     <section class="shop-hero">
         <div class="hero-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop" alt="Shop" class="hero-image">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop" alt="Shop"
+                class="hero-image">
             <div class="hero-overlay">
                 <div class="quality-badge">QUALITY UP TO</div>
                 <h1 class="hero-title">Shop</h1>
@@ -69,324 +77,372 @@
         <div class="container">
             <!-- Products Grid -->
             <div class="products-grid" id="productsGrid">
-                
+
                 <!-- NEW ARRIVALS PRODUCTS -->
                 <div class="product-card" data-category="new-arrivals" data-product-id="na-1">
                     <div class="product-image-container">
-                        <img src=" https://plus.unsplash.com/premium_photo-1755034663782-3902ccfae2d4?w=400&h=400&fit=crop" alt="White Cuban Shirt" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="na-1"
-                                data-wishlist-name="White Cuban Shirt"
-                                data-wishlist-price="10.99"
-                                data-wishlist-image=" https://plus.unsplash.com/premium_photo-1755034663782-3902ccfae2d4?w=400">♡</button>
+                        <img src=" https://plus.unsplash.com/premium_photo-1755034663782-3902ccfae2d4?w=400&h=400&fit=crop"
+                            alt="White Cuban Shirt" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="na-1" data-wishlist-name="White Cuban Shirt"
+                            data-wishlist-price="10.99"
+                            data-wishlist-image=" https://plus.unsplash.com/premium_photo-1755034663782-3902ccfae2d4?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">White Cuban Shirt</h3>
                         <p class="product-description">Description of featured product</p>
-                        <p class="product-price">₦10.99</p>
+                        <article class="price-section">
+                            <p class="product-price">₦10.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="new-arrivals" data-product-id="na-2">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop" alt="Burgundy Polo Shirt" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="na-2"
-                                data-wishlist-name="Burgundy Polo Shirt"
-                                data-wishlist-price="10.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop"
+                            alt="Burgundy Polo Shirt" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="na-2" data-wishlist-name="Burgundy Polo Shirt"
+                            data-wishlist-price="10.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Burgundy Polo Shirt</h3>
                         <p class="product-description">Description of featured product</p>
-                        <p class="product-price">₦10.99</p>
+                        <article class="price-section">
+                            <p class="product-price">₦10.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="new-arrivals" data-product-id="na-3">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop" alt="Blue Shirt Collection" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="na-3"
-                                data-wishlist-name="Blue Shirt Collection"
-                                data-wishlist-price="10.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop"
+                            alt="Blue Shirt Collection" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="na-3" data-wishlist-name="Blue Shirt Collection"
+                            data-wishlist-price="10.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Blue Shirt Collection</h3>
                         <p class="product-description">Description of featured product</p>
-                        <p class="product-price">₦10.99</p>
+                        <article class="price-section">
+                            <p class="product-price">₦10.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="new-arrivals" data-product-id="na-4">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop" alt="Los Angeles Jersey" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="na-4"
-                                data-wishlist-name="Los Angeles Jersey"
-                                data-wishlist-price="10.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop"
+                            alt="Los Angeles Jersey" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="na-4" data-wishlist-name="Los Angeles Jersey"
+                            data-wishlist-price="10.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Los Angeles Jersey</h3>
                         <p class="product-description">Description of featured product</p>
-                        <p class="product-price">₦10.99</p>
+                        <article class="price-section">
+                            <p class="product-price">₦10.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="new-arrivals" data-product-id="na-5">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400&h=400&fit=crop" alt="Plaid Flannel Shirt" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="na-5"
-                                data-wishlist-name="Plaid Flannel Shirt"
-                                data-wishlist-price="10.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400&h=400&fit=crop"
+                            alt="Plaid Flannel Shirt" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="na-5" data-wishlist-name="Plaid Flannel Shirt"
+                            data-wishlist-price="10.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Plaid Flannel Shirt</h3>
                         <p class="product-description">Description of featured product</p>
-                        <p class="product-price">₦10.99</p>
+
+                        <article class="price-section">
+                            <p class="product-price">₦10.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
+                            
                     </div>
                 </div>
 
                 <div class="product-card" data-category="new-arrivals" data-product-id="na-6">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400&h=400&fit=crop" alt="Black Joggers" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="na-6"
-                                data-wishlist-name="Black Joggers"
-                                data-wishlist-price="10.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400&h=400&fit=crop"
+                            alt="Black Joggers" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="na-6" data-wishlist-name="Black Joggers"
+                            data-wishlist-price="10.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Black Joggers</h3>
                         <p class="product-description">Description of featured product</p>
-                        <p class="product-price">₦10.99</p>
+
+                        <article class="price-section">
+                            <p class="product-price">₦10.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <!-- LIMITED EDITIONS -->
                 <div class="product-card" data-category="limited-editions" data-product-id="le-1">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop" alt="Limited Black Jacket" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="le-1"
-                                data-wishlist-name="Limited Black Jacket"
-                                data-wishlist-price="219.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop"
+                            alt="Limited Black Jacket" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="le-1" data-wishlist-name="Limited Black Jacket"
+                            data-wishlist-price="219.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Limited Black Jacket</h3>
                         <p class="product-description">Exclusive limited edition piece</p>
-                        <p class="product-price">₦219.99</p>
+
+                        <article class="price-section">
+                            <p class="product-price">₦219.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="limited-editions" data-product-id="le-2">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1520975867597-0af37a22e31e?w=400&h=400&fit=crop" alt="Premium Leather Jacket" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="le-2"
-                                data-wishlist-name="Premium Leather Jacket"
-                                data-wishlist-price="299.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1520975867597-0af37a22e31e?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1520975867597-0af37a22e31e?w=400&h=400&fit=crop"
+                            alt="Premium Leather Jacket" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="le-2" data-wishlist-name="Premium Leather Jacket"
+                            data-wishlist-price="299.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1520975867597-0af37a22e31e?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Premium Leather Jacket</h3>
                         <p class="product-description">Handcrafted leather masterpiece</p>
-                        <p class="product-price">₦299.99</p>
+
+                        <article class="price-section">
+                            <p class="product-price">₦299.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="limited-editions" data-product-id="le-3">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=400&fit=crop" alt="Designer Coat" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="le-3"
-                                data-wishlist-name="Designer Coat"
-                                data-wishlist-price="349.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400&h=400&fit=crop"
+                            alt="Designer Coat" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="le-3" data-wishlist-name="Designer Coat"
+                            data-wishlist-price="349.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Designer Coat</h3>
                         <p class="product-description">Limited to 50 pieces worldwide</p>
-                        <p class="product-price">₦349.99</p>
+
+                        <article class="price-section">
+                            <p class="product-price">₦349.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>
+                        </article>
                     </div>
                 </div>
 
                 <!-- COLLECTIONS PRODUCTS -->
                 <div class="product-card" data-category="collections" data-product-id="col-1">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&h=400&fit=crop" alt="Africa Root Collection" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="col-1"
-                                data-wishlist-name="Africa Root Collection"
-                                data-wishlist-price="219.00"
-                                data-wishlist-image="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&h=400&fit=crop"
+                            alt="Africa Root Collection" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="col-1"
+                            data-wishlist-name="Africa Root Collection" data-wishlist-price="219.00"
+                            data-wishlist-image="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Africa Root Collection</h3>
                         <p class="product-description">Premium quality collection</p>
-                        <p class="product-price">₦219.00</p>
+
+                        <article class="price-section">
+                            <p class="product-price">₦219.00</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>
+                        </article>
+
                     </div>
                 </div>
 
                 <div class="product-card" data-category="collections" data-product-id="col-2">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=400&fit=crop" alt="Urban Street Collection" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="col-2"
-                                data-wishlist-name="Urban Street Collection"
-                                data-wishlist-price="189.00"
-                                data-wishlist-image="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=400&fit=crop"
+                            alt="Urban Street Collection" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="col-2"
+                            data-wishlist-name="Urban Street Collection" data-wishlist-price="189.00"
+                            data-wishlist-image="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Urban Street Collection</h3>
                         <p class="product-description">Modern streetwear collection</p>
-                        <p class="product-price">₦189.00</p>
+                        <article class="price-section">
+                            <p class="product-price">₦189.00</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="collections" data-product-id="col-3">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop" alt="Classic Heritage" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="col-3"
-                                data-wishlist-name="Classic Heritage"
-                                data-wishlist-price="249.00"
-                                data-wishlist-image="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop"
+                            alt="Classic Heritage" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="col-3" data-wishlist-name="Classic Heritage"
+                            data-wishlist-price="249.00"
+                            data-wishlist-image="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Classic Heritage</h3>
                         <p class="product-description">Timeless heritage pieces</p>
-                        <p class="product-price">₦249.00</p>
+                        <article class="price-section">
+                            <p class="product-price">₦249.00</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <!-- ACCESSORIES PRODUCTS -->
                 <div class="product-card" data-category="accessories" data-product-id="acc-1">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop" alt="Leather Belt" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="acc-1"
-                                data-wishlist-name="Leather Belt"
-                                data-wishlist-price="49.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop"
+                            alt="Leather Belt" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="acc-1" data-wishlist-name="Leather Belt"
+                            data-wishlist-price="49.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Leather Belt</h3>
                         <p class="product-description">Genuine leather accessory</p>
-                        <p class="product-price">₦49.99</p>
+                        <article class="price-section">
+                            <p class="product-price">₦49.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="accessories" data-product-id="acc-2">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&h=400&fit=crop" alt="Designer Watch" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="acc-2"
-                                data-wishlist-name="Designer Watch"
-                                data-wishlist-price="129.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400&h=400&fit=crop"
+                            alt="Designer Watch" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="acc-2" data-wishlist-name="Designer Watch"
+                            data-wishlist-price="129.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Designer Watch</h3>
                         <p class="product-description">Luxury timepiece</p>
-                        <p class="product-price">₦129.99</p>
+                        <article class="price-section">
+                            <p class="product-price">₦129.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="accessories" data-product-id="acc-3">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=400&fit=crop" alt="Premium Sunglasses" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="acc-3"
-                                data-wishlist-name="Premium Sunglasses"
-                                data-wishlist-price="89.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=400&fit=crop"
+                            alt="Premium Sunglasses" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="acc-3" data-wishlist-name="Premium Sunglasses"
+                            data-wishlist-price="89.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Premium Sunglasses</h3>
                         <p class="product-description">UV protection eyewear</p>
-                        <p class="product-price">₦89.99</p>
+                        <article class="price-section">
+                            <p class="product-price">₦89.99</p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <!-- SALES PRODUCTS -->
                 <div class="product-card" data-category="sales" data-product-id="sale-1">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop" alt="Sale Jacket" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="sale-1"
-                                data-wishlist-name="Sale Jacket"
-                                data-wishlist-price="79.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop"
+                            alt="Sale Jacket" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="sale-1" data-wishlist-name="Sale Jacket"
+                            data-wishlist-price="79.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Sale Jacket</h3>
                         <p class="product-description">50% OFF - Limited time</p>
-                        <p class="product-price">
-                            <span style="text-decoration: line-through; color: #999; font-size: 1rem; margin-right: 0.5rem;">₦159.99</span>
-                            ₦79.99
-                        </p>
+                        <article class="price-section">                            
+                            <p class="product-price">
+                                <span
+                                style="text-decoration: line-through; color: #999; font-size: 1rem; margin-right: 0.5rem;">₦159.99</span>
+                                ₦79.99
+                            </p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
                 <div class="product-card" data-category="sales" data-product-id="sale-2">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1602810318660-d6c8b6c8d8a8?w=400&h=400&fit=crop" alt="Clearance Shirt" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="sale-2"
-                                data-wishlist-name="Clearance Shirt"
-                                data-wishlist-price="19.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1602810318660-d6c8b6c8d8a8?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1602810318660-d6c8b6c8d8a8?w=400&h=400&fit=crop"
+                            alt="Clearance Shirt" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="sale-2" data-wishlist-name="Clearance Shirt"
+                            data-wishlist-price="19.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1602810318660-d6c8b6c8d8a8?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Clearance Shirt</h3>
                         <p class="product-description">Final clearance sale</p>
-                        <p class="product-price">
-                            <span style="text-decoration: line-through; color: #999; font-size: 1rem; margin-right: 0.5rem;">₦39.99</span>
-                            ₦19.99
-                        </p>
-                    </div>
+                        <article class="price-section">
+                                <p class="product-price">
+                                <span
+                                style="text-decoration: line-through; color: #999; font-size: 1rem; margin-right: 0.5rem;">₦39.99</span>
+                                ₦19.99
+                            </p>
+                                <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
+                        </div>
                 </div>
 
                 <div class="product-card" data-category="sales" data-product-id="sale-3">
                     <div class="product-image-container">
-                        <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400&h=400&fit=crop" alt="Discount Pants" class="product-image">
-                        <button class="wishlist-btn" 
-                                data-wishlist-id="sale-3"
-                                data-wishlist-name="Discount Pants"
-                                data-wishlist-price="39.99"
-                                data-wishlist-image="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400">♡</button>
+                        <img src="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400&h=400&fit=crop"
+                            alt="Discount Pants" class="product-image">
+                        <button class="wishlist-btn" data-wishlist-id="sale-3" data-wishlist-name="Discount Pants"
+                            data-wishlist-price="39.99"
+                            data-wishlist-image="https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400">♡</button>
                     </div>
                     <div class="product-details">
                         <p class="product-label">Featured product</p>
                         <h3 class="product-name">Discount Pants</h3>
                         <p class="product-description">50% OFF - Don't miss out</p>
-                        <p class="product-price">
-                            <span style="text-decoration: line-through; color: #999; font-size: 1rem; margin-right: 0.5rem;">₦79.99</span>
-                            ₦39.99
-                        </p>
+                        <article class="price-section">
+                            
+                            <p class="product-price">
+                                <span
+                                style="text-decoration: line-through; color: #999; font-size: 1rem; margin-right: 0.5rem;">₦79.99</span>
+                                ₦39.99
+                            </p>
+                            <button class="btn-add-to-cart" id="addToCartBtn">Add to cart</button>    
+                        </article>
                     </div>
                 </div>
 
@@ -416,12 +472,17 @@
                     <h3>Download the Keidan mobile app</h3>
                     <p>Stay updated on latest hits, vibes, and waves with the Keidan mobile app</p>
                     <div class="app-buttons">
-                        <button class="btn-app"><img width="25" height="25" src="https://img.icons8.com/fluency/48/apple-app-store.png" alt="apple-app-store"/> App Store</button>
-                        <button class="btn-app"><img width="25" height="25" src="https://img.icons8.com/fluency/50/google-play.png" alt="google-play"/> Play Store</button>
+                        <button class="btn-app"><img width="25" height="25"
+                                src="https://img.icons8.com/fluency/48/apple-app-store.png" alt="apple-app-store" /> App
+                            Store</button>
+                        <button class="btn-app"><img width="25" height="25"
+                                src="https://img.icons8.com/fluency/50/google-play.png" alt="google-play" /> Play
+                            Store</button>
                     </div>
                 </div>
                 <div class="app-image">
-                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=800&fit=crop" alt="Mobile App" class="phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=800&fit=crop"
+                        alt="Mobile App" class="phone-mockup">
                 </div>
             </div>
         </div>
@@ -433,12 +494,17 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <h3 class="footer-logo">KEIDAN</h3>
-                    <p>Where music meets fashion, where culture meets creativity. Join us on this journey of artistic expression and cultural celebration.</p>
+                    <p>Where music meets fashion, where culture meets creativity. Join us on this journey of artistic
+                        expression and cultural celebration.</p>
                     <div class="social-icons">
-                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook-new"/></span>
-                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/twitterx--v1.png" alt="twitterx--v1"/></span>
-                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></span>
-                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/youtube.png" alt="youtube"/></span>
+                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook-new.png"
+                                alt="facebook-new" /></span>
+                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/twitterx--v1.png"
+                                alt="twitterx--v1" /></span>
+                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png"
+                                alt="instagram-new" /></span>
+                        <span><img width="48" height="48" src="https://img.icons8.com/fluency/48/youtube.png"
+                                alt="youtube" /></span>
                     </div>
                 </div>
 
@@ -457,7 +523,7 @@
                     <h4>Contact</h4>
                     <p>📧 hello@keidanworld.com</p>
                     <p>📍 Lagos • London • New York</p>
-                    
+
                     <div class="newsletter">
                         <h4>Newsletter</h4>
                         <div class="newsletter-form">
@@ -480,4 +546,5 @@
     <script src="assets/js/wishlist.js"></script>
     <script src="assets/js/shop.js"></script>
 </body>
+
 </html>
